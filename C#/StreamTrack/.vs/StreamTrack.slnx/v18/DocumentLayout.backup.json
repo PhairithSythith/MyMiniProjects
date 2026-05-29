@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ritzo\\source\\repos\\StreamTrack\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3834B765-9A98-4671-86E6-52C1BFB49D2E}|StreamTrack\\StreamTrack.csproj|c:\\users\\ritzo\\source\\repos\\streamtrack\\streamtrack\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3834B765-9A98-4671-86E6-52C1BFB49D2E}|StreamTrack\\StreamTrack.csproj|solutionrelative:streamtrack\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3834B765-9A98-4671-86E6-52C1BFB49D2E}|StreamTrack\\StreamTrack.csproj|c:\\users\\ritzo\\source\\repos\\streamtrack\\streamtrack\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3834B765-9A98-4671-86E6-52C1BFB49D2E}|StreamTrack\\StreamTrack.csproj|solutionrelative:streamtrack\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MoviesController.cs",
+              "DocumentMoniker": "C:\\Users\\ritzo\\source\\repos\\StreamTrack\\StreamTrack\\Controllers\\MoviesController.cs",
+              "RelativeDocumentMoniker": "StreamTrack\\Controllers\\MoviesController.cs",
+              "ToolTip": "C:\\Users\\ritzo\\source\\repos\\StreamTrack\\StreamTrack\\Controllers\\MoviesController.cs",
+              "RelativeToolTip": "StreamTrack\\Controllers\\MoviesController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T10:34:42.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Movie.cs",
+              "DocumentMoniker": "C:\\Users\\ritzo\\source\\repos\\StreamTrack\\StreamTrack\\Models\\Movie.cs",
+              "RelativeDocumentMoniker": "StreamTrack\\Models\\Movie.cs",
+              "ToolTip": "C:\\Users\\ritzo\\source\\repos\\StreamTrack\\StreamTrack\\Models\\Movie.cs",
+              "RelativeToolTip": "StreamTrack\\Models\\Movie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T10:33:19.407Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
