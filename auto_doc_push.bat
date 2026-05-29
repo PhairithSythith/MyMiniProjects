@@ -1,22 +1,27 @@
 @echo off
-title Git Dokumentum Szinkronizalo
+title Git Dokumentum Szinkronizalo v3
 cd /d "%~dp0"
 
 :loop
 echo [%time%] Ellenorzes...
 
-:: Csak a doksikat adjuk hozza
-git add *.docx *.txt *.pdf *.png *.jpg 2>nul
+:: 1. Mindent hozzaadunk (a .gitignore megvedi a C# kodot, a .bat pedig bekerül, igy nincs hiba!)
+git add .
 
-:: Ellenorizzuk, hogy van-e valtozas
-git diff --cached --quiet
-if %errorlevel% == 1 (
-    echo [INFO] uj vagy modositott dokumentum eszlelve! feltoltes...
+:: 2. Megnezzuk, hogy van-e tenyleges valtozas (uj PNG, modositott Word stb.)
+git status --porcelain | findstr /R "^" >nul
+if %errorlevel% == 0 (
+    echo [INFO] Valtozas eszlelve! Feltoltes folyamatban...
+    
+    :: 3. Automatikus frissites a felhobol, ha elteres lenne
+    git pull origin main --rebase
+    
+    :: 4. Elmentjuk es feltoljük
     git commit -m "Automata terv-mentes (%date% %time%)"
     git push origin main
-    echo [INFO] Kesz! Dokumentumok a GitHubon.
+    echo [INFO] Sikeresen feltoltve a GitHubra!
 )
 
-:: 60 masodperc varakozas
-timeout /t 60 /nobreak >nul
+:: 30 masodperc varakozas
+timeout /t 30 /nobreak >nul
 goto loop
