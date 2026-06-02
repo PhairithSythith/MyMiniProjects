@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using StreamTrack.Models;
 
 namespace StreamTrack
 {
@@ -7,9 +9,13 @@ namespace StreamTrack
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            // 1. REGISZTRÁLJUK AZ ADATBÁZIS ÖSSZEKÖTŐT (DbContext)
+            // Ez mondja meg a programnak, hogy használja a legenerált MariaDB modelleket
+            builder.Services.AddDbContext<StreamTrackContext>();
 
+            // Add services to the container.
             builder.Services.AddControllers();
+
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
 
@@ -24,7 +30,6 @@ namespace StreamTrack
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

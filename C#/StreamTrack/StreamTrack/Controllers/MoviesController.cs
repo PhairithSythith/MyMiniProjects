@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using StreamTrack.Models;
 
 namespace StreamTrack.Controllers
@@ -8,16 +9,32 @@ namespace StreamTrack.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
-        private static readonly List<Movie> MockMovies = new List<Movie>
-        {
-            new Movie { Id = 1, Title = "Stranger Things", Description = "Rejtélyes dolgok egy kisvárosban.", StreamingPlatform = "Netflix", Type = "Series" },
-            new Movie { Id = 2, Title = "Dűne: Második rész", Description = "Paul Atreides bosszúja.", StreamingPlatform = "HBO Max", Type = "Movie" }
-        };
+        // 1. Behozzuk a legenerált adatbázis kontextust
+        private readonly StreamTrackContext _context;
 
-        [HttpGet]
-        public ActionResult<IEnumerable<Movie>> GetMovies()
+        // 2. A konstruktorban elkérjük a .NET-től a futó adatbázis kapcsolatot (Dependency Injection)
+        public MoviesController(StreamTrackContext context)
         {
-            return Ok(MockMovies);
+            _context = context;
+        }
+
+        // 3. Az igazi Végpont: Kilistázza az összes filmet a MariaDB-ből
+        [HttpGet]
+        public async Task<IActionResult> GetMovies()
+        {
+            try
+            {
+                // Lekérjük a 'film' tábla összes sorát aszinkron módon
+                var movies = await _context.Films.ToListAsync();
+
+                // Visszaküldjük a filmek listáját a böngészőnek (200 OK)
+                return Ok(movies);
+            }
+            catch (Exception ex)
+            {
+                // Ha valami hiba történne (pl. leállt a MariaDB), hibát küldünk vissza
+                return StatusCode(500, new { message = "Hiba történt az adatbázis elérésekor!", error = ex.Message });
+            }
         }
     }
 }
