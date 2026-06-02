@@ -1,20 +1,14 @@
 @echo off
-title Git Dokumentum Szinkronizalo v3 - JAVÍTOTT
+title Git Dokumentum Szinkronizalo v4 - JAVÍTOTT
 cd /d "%~dp0"
 
 :loop
 echo [%time%] Ellenorzes...
 
-:: 1. A zárolt .vs mappát kikerülve, csak a tényleges kódot és konfigurációkat adjuk hozzá
-git add "Csharp/*.cs" 2>nul
-git add "Csharp/*.csproj" 2>nul
-git add "Csharp/*.sln" 2>nul
-git add "Csharp/*.json" 2>nul
-:: Hozzáadjuk magát a bat fájlt és a projekt gyökerét a biztonság kedvéért
-git add auto_doc_push.bat
-git add .
+:: A .gitignore fájl miatt a 'git add .' most már NEM fogja bántani a zárolt .vs mappát!
+git add . 2>nul
 
-:: 2. Megbízható ellenőrzés: ha a 'git status -s' kimenete nem üres, akkor van változás!
+:: Megbízható ellenőrzés: ha a 'git status -s' kimenete nem üres, akkor van változás!
 set "valtozas="
 for /f "tokens=*" %%i in ('git status -s') do (
     set valtozas=1
@@ -23,10 +17,10 @@ for /f "tokens=*" %%i in ('git status -s') do (
 if defined valtozas (
     echo [INFO] Valtozas eszlelve! Feltoltes folyamatban...
     
-    :: 3. Elmentjük a változásokat helyben, hogy a pull ne hasaljon el
+    :: Elmentjük a változásokat helyben
     git commit -m "Automata terv-mentes (%date% %time%)"
     
-    :: 4. Frissítés a felhőből (ha kell), majd feltolás
+    :: Frissítés a felhőből (rebase-el, hogy tiszta legyen), majd feltolás
     git pull origin main --rebase
     git push origin main
     
