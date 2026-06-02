@@ -1,5 +1,12 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using StreamTrack.Models;
+using System.Text;
+// 🔐 JWT Hitelesítés beállítása
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace StreamTrack
 {
@@ -16,6 +23,28 @@ namespace StreamTrack
             // Add services to the container.
             builder.Services.AddControllers();
 
+            var jwtSettings = builder.Configuration.GetSection("Jwt");
+            var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = jwtSettings["Issuer"],
+                    ValidAudience = jwtSettings["Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(key)
+                };
+            });
+
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
 
@@ -29,7 +58,8 @@ namespace StreamTrack
 
             app.UseHttpsRedirection();
 
-            app.UseAuthorization();
+            app.UseAuthentication(); //  Ez ellenőrzi a tokent (Ezt add hozzá!)
+            app.UseAuthorization();  //  Ez ellenőrzi a jogosultságot
 
             app.MapControllers();
 

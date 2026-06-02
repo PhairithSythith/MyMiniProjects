@@ -42,8 +42,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -52,7 +56,7 @@
               "RelativeDocumentMoniker": "StreamTrack\\teszt.http",
               "ToolTip": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\teszt.http",
               "RelativeToolTip": "StreamTrack\\teszt.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAwBkAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
               "WhenOpened": "2026-06-02T08:04:54.506Z",
               "EditorCaption": ""
@@ -67,8 +71,7 @@
               "RelativeToolTip": "StreamTrack\\StreamTrack.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-06-02T08:04:20.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-02T08:04:20.973Z"
             },
             {
               "$type": "Document",
@@ -80,8 +83,7 @@
               "RelativeToolTip": "StreamTrack\\Controllers\\MoviesController.cs",
               "ViewState": "AgIAAEsAAAAAAAAAAAAkwFsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T07:57:24.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-02T07:57:24.891Z"
             },
             {
               "$type": "Document",
@@ -93,8 +95,7 @@
               "RelativeToolTip": "teszt.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-06-02T07:25:10.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-02T07:25:10.315Z"
             },
             {
               "$type": "Document",
