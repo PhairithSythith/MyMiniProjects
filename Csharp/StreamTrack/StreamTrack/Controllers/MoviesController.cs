@@ -31,7 +31,7 @@ namespace StreamTrack.Controllers
             }
         }
 
-        // POST: api/movies (Ezzel tudsz majd új filmet beküldeni a teszteléshez!)
+        // POST: api/movies
         [HttpPost]
         public async Task<ActionResult<Film>> PostMovie(Film ujFilm)
         {
@@ -40,16 +40,16 @@ namespace StreamTrack.Controllers
 
             return CreatedAtAction(nameof(GetMovies), new { id = ujFilm.Id }, ujFilm);
         }
-        // PUT: api/movies/5
+
+        // 🟢 JAVÍTOTT PUT: api/movies/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutMovie(int id, [FromBody] Movie modositottFilm)
+        public async Task<IActionResult> PutMovie(int id, [FromBody] Film modositottFilm)
         {
             if (id != modositottFilm.Id)
             {
                 return BadRequest("A megadott ID nem egyezik a film azonosítójával.");
             }
 
-            // Értesítjük az Entity Frameworköt, hogy ez az objektum módosult
             _context.Entry(modositottFilm).State = EntityState.Modified;
 
             try
@@ -58,8 +58,8 @@ namespace StreamTrack.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                // Ha a mentés során kiderül, hogy a film már nem létezik az adatbázisban
-                if (!_context.Film.Any(e => e.Id == id))
+                // Átírva Films-re
+                if (!_context.Films.Any(e => e.Id == id))
                 {
                     return NotFound($"A(z) {id} azonosítójú film nem található.");
                 }
@@ -69,21 +69,21 @@ namespace StreamTrack.Controllers
                 }
             }
 
-            return NoContent(); // Sikeres módosítás után 204 No Content-et szokás küldeni
+            return NoContent();
         }
 
-        // DELETE: api/movies/5
+        // 🟢 JAVÍTOTT DELETE: api/movies/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteMovie(int id)
         {
-            var film = await _context.Film.FindAsync(id);
+            // Átírva Films-re
+            var film = await _context.Films.FindAsync(id);
             if (film == null)
             {
                 return NotFound($"A(z) {id} azonosítójú film nem található.");
             }
 
-            // Töröljük a filmet a kontextusból és mentjük a változást
-            _context.Film.Remove(film);
+            _context.Films.Remove(film);
             await _context.SaveChangesAsync();
 
             return Ok(new { message = $"A(z) {id} azonosítójú film sikeresen törölve." });
