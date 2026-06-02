@@ -3,10 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using StreamTrack.Models;
 using System.Text;
-// 🔐 JWT Hitelesítés beállítása
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
 
 namespace StreamTrack
 {
@@ -24,7 +20,7 @@ namespace StreamTrack
             builder.Services.AddControllers();
 
             var jwtSettings = builder.Configuration.GetSection("Jwt");
-            var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
+            var key = Encoding.UTF8.GetBytes(jwtSettings["Key"] ?? "AlapertelmezettSzuperTitkosKulcs1234567890!");
 
             builder.Services.AddAuthentication(options =>
             {

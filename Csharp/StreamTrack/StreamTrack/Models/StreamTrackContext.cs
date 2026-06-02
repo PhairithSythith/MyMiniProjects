@@ -24,8 +24,8 @@ public partial class StreamTrackContext : DbContext
 
     public virtual DbSet<Streamingplatform> Streamingplatforms { get; set; }
 
+    // 💡 A warning biztonságosan eltávolítva a metódus elől
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseMySql("server=localhost;database=StreamTrack;user=root", Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.4.32-mariadb"));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -80,7 +80,9 @@ public partial class StreamTrackContext : DbContext
                 .HasColumnName("ID");
             entity.Property(e => e.Email).HasMaxLength(100);
             entity.Property(e => e.FelhNev).HasMaxLength(50);
-            entity.Property(e => e.Jelszo).HasMaxLength(30);
+
+            // 🔐 JAVÍTVA: A BCrypt hashnek kell a hely, ezért 30-ról felemeltük 255-re!
+            entity.Property(e => e.Jelszo).HasMaxLength(255);
         });
 
         modelBuilder.Entity<Film>(entity =>
@@ -88,6 +90,7 @@ public partial class StreamTrackContext : DbContext
             entity.HasKey(e => e.Id).HasName("PRIMARY");
 
             entity.ToTable("film");
+
 
             entity.Property(e => e.Id)
                 .HasColumnType("int(11)")
@@ -131,4 +134,3 @@ public partial class StreamTrackContext : DbContext
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
-
