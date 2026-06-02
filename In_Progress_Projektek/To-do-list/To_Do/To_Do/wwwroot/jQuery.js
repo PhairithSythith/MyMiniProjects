@@ -21,7 +21,7 @@ $(function () {
             const $ktarol = $('<div class="ktarol"></div>');
             const $btnArch = $("<button type='button'>Archívumba mentés</button>");
 
-            $ntarol.append($nli).append($btnTorol);
+            $ntarol.append($nli).append($btnTorol).append($btnKezs);
             $nincsKesz.append($ntarol);
 
             $input.val('');
