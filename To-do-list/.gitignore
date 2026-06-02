@@ -1,0 +1,15 @@
+## Visual Studio ideiglenes fájlok
+.vs/
+*.suo
+*.user
+*.slnx
+
+## .NET fordítási termékek (Szemét)
+bin/
+obj/
+Csharp/StreamTrack/StreamTrack/bin/
+Csharp/StreamTrack/StreamTrack/obj/
+
+## Felhasználó-specifikus beállítások
+*.userosscache
+*.sln.docstates

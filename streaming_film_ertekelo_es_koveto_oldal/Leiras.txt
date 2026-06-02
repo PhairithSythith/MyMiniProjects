@@ -1,0 +1,17 @@
+Az én elvárásaim (A megrendelői igények):
+
+    A filmek listája: Szeretném, ha a weboldalra tévedő emberek azonnal látnák a filmek és sorozatok listáját. Legyen ott a címük, a leírásuk, meg hogy melyik platformon futnak (Netflix, HBO Max, stb.).
+
+    Új filmek felvitele (Admin felület): Én, mint tulajdonos, szeretnék egy olyan titkos felületet, ahol be tudok gépelni egy új filmet (Cím, Leírás, Platform, Plakát linkje), és ha rákattintok a mentésre, az kerüljön be a rendszerbe.
+
+    Értékelés: A regisztrált felhasználók adhassanak a filmekre egy 1 és 10 közötti pontszámot. Nagyon fontos, hogy a rendszer automatikusan számolja ki és jelenítse meg a film mellett az átlagpontszámot! (Pl. ha én adok rá 10 pontot, a feleségem meg 6-ot, akkor a film mellett 8.0 pont jelenjen meg).
+
+Kedves Fejlesztő, itt az első feladatod:
+
+Ahhoz, hogy elutaljam az első részletet, látnom kell, hogy elindult a munka. Azt beszéltük a technikai tanácsadómmal, hogy te egy ASP.NET Core Web API-t fogsz használni a háttérben.
+
+Megcsinálnád nekem az első verziót, ami C# kódban leírja, hogyan fog kinézni egy "Film" (Movie) objektum?
+
+Tudod, az a lényeg, hogy a C# backend értse, milyen adatai vannak egy filmnek (Cím, Leírás, stb.), és a beépített Swagger nevű tesztelő felületen én már lássam, hogy "létezik" a rendszerben a filmek kezelése.
+
+Ha elkészült a projekt alapja a Visual Studio-ban, és megírtad a Film osztályt (Model-t), küldd át a kódot, vagy szólj, ha segítség kell, hogyan kell felépíteni a C# osztályt!

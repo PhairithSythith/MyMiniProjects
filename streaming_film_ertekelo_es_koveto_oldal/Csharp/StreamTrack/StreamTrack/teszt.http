@@ -1,0 +1,114 @@
+### 1. LÉPÉS: Összes film lekérése (GET)
+GET http://localhost:5165/api/movies
+
+###
+
+### 2. LÉPÉS: Új film létrehozása (POST) - JAVÍTOTT, KÖTELEZŐ MEZŐKKEL
+POST http://localhost:5165/api/movies
+Content-Type: application/json
+
+{
+  "Cim": "Eredet",
+  "Mufaj": "Sci-Fi",
+  "Hossz": 148,
+  "MegjelenesEve": 2010,
+  "Tipus": "Film",
+  "PlakatKep": ""
+}
+
+###
+
+### 3. LÉPÉS: Új felhasználó létrehozása (POST)
+POST http://localhost:5165/api/users
+Content-Type: application/json
+
+{
+  "FelhNev": "MoziManias100",
+  "Email": "teszt@email.com",
+  "Jelszo": "TitkosJelszo123",
+  "RegisztracioDatuma": "2026-06-02T00:00:00Z"
+}
+
+###
+
+### 3.B LÉPÉS: Bejelentkezés (LOGIN) - Most már emaillel, hogy a .NET ne hisztizzen
+POST http://localhost:5165/api/users/login
+Content-Type: application/json
+
+{
+  "FelhNev": "MoziManias100",
+  "Jelszo": "TitkosJelszo123",
+  "Email": "login@teszt.com"
+}
+
+### 3.C LÉPÉS: Bejelentkezés (LOGIN) - MOST MÁR KAMU EMAIL NÉLKÜL!
+POST http://localhost:5165/api/users/login
+Content-Type: application/json
+
+{
+  "FelhNev": "MoziManias100",
+  "Jelszo": "TitkosJelszo123"
+}
+
+
+### 3. D LÉPÉS: Új felhasználó létrehozása (Titkosítva)
+POST http://localhost:5165/api/users
+Content-Type: application/json
+
+{
+  "FelhNev": "BiztonsagosUser",
+  "Email": "tesztsok@email.com",
+  "Jelszo": "TitkosJelszo1234",
+  "RegisztracioDatuma": "2026-06-02T00:00:00Z"
+}
+
+###
+
+### 4. LÉPÉS: Új értékelés beküldése (POST)
+POST http://localhost:5165/api/ratings
+Content-Type: application/json
+
+{
+  "FilmId": 1,
+  "FelhasznaloId": 1,
+  "Pontszam": 10,
+  "SzovegesErtekeles": "Zseniális film, Christopher Nolan mesterműve!",
+  "ErtekelisIdopontja": "2026-06-02T00:00:00Z"
+}
+
+###
+
+### 5. LÉPÉS: Film adatainak módosítása (PUT)
+PUT http://localhost:5165/api/movies/1
+Content-Type: application/json
+
+{
+  "Id": 1,
+  "Cim": "Eredet - Bővített Kiadás",
+  "Mufaj": "Sci-Fi/Akció",
+  "Hossz": 158,
+  "MegjelenesEve": 2010,
+  "Tipus": "Film",
+  "PlakatKep": ""
+}
+###
+
+### 5.B LÉPÉS: Film adatainak módosítása (PUT) - MOST MÁR TOKENNEL!
+PUT http://localhost:5165/api/movies/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Ik1vemlNYW5pYXMxMDAiLCJuYW1laWQiOiIzIiwibmJmIjoxNzgwMzg5ODA1LCJleHAiOjE3ODAzOTcwMDUsImlhdCI6MTc4MDM4OTgwNSwiaXNzIjoiU3RyZWFtVHJhY2tTZXJ2ZXIiLCJhdWQiOiJTdHJlYW1UcmFja1VzZXJzIn0.QtAHekG1_7tx367DmgwUA_FFyYl3jkP8fQBgeyz7We4
+
+{
+  "Id": 1,
+  "Cim": "Eredet - Biztonságos Kiadás",
+  "Mufaj": "Sci-Fi/Akció",
+  "Hossz": 158,
+  "MegjelenesEve": 2010,
+  "Tipus": "Film",
+  "PlakatKep": ""
+}
+
+### 6. LÉPÉS: Film törlése (DELETE)
+# Ha erre rányomsz, az 1-es ID-jú film (és a hozzá láncolt értékelések) törlődnek!
+# (Ha tesztelni akarod, csak töröld ki a '//' jeleket az alábbi sor elejéről)
+// DELETE http://localhost:5165/api/movies/1
