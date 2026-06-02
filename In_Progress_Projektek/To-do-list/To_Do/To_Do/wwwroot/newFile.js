@@ -60,6 +60,7 @@ $(function() {
         }
         else return;
         for (let i = 0; i < adatTarolo.length; i++) {
+            let aktualis = i;
             const $btnTorol = $("<button type='button'>Törlés</button>");
             const $btnKezs = $("<button type='button'>Kész</button>");
             const $nli = $("<li></li>").text(feladat);
@@ -67,6 +68,7 @@ $(function() {
             $ntarol.append($nli).append($btnTorol).append($btnKezs);
             $nincsKesz.append($ntarol);
             $input.val('');
+            if (adatTarolo[i] === aktualis) { adatTarolo.pop(i); }
         }
     });
 });
