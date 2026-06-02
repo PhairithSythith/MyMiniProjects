@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StreamTrack.Models;
@@ -33,6 +34,7 @@ namespace StreamTrack.Controllers
 
         // POST: api/movies
         [HttpPost]
+        [Authorize] // 🔐 Csak bejelentkezett felhasználóknak!
         public async Task<ActionResult<Film>> PostMovie(Film ujFilm)
         {
             _context.Films.Add(ujFilm);
@@ -43,6 +45,7 @@ namespace StreamTrack.Controllers
 
         // 🟢 JAVÍTOTT PUT: api/movies/5
         [HttpPut("{id}")]
+        [Authorize] // 🔐 Csak bejelentkezett felhasználóknak!
         public async Task<IActionResult> PutMovie(int id, [FromBody] Film modositottFilm)
         {
             if (id != modositottFilm.Id)
@@ -74,6 +77,7 @@ namespace StreamTrack.Controllers
 
         // 🟢 JAVÍTOTT DELETE: api/movies/5
         [HttpDelete("{id}")]
+        [Authorize] // 🔐 Csak bejelentkezett felhasználóknak!
         public async Task<IActionResult> DeleteMovie(int id)
         {
             // Átírva Films-re
