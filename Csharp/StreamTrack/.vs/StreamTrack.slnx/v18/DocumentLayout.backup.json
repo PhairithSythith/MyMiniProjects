@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|c:\\users\\ritzo\\desktop\\saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\csharp\\streamtrack\\streamtrack\\models\\streamtrackcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|solutionrelative:streamtrack\\models\\streamtrackcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|c:\\users\\ritzo\\desktop\\saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\csharp\\streamtrack\\streamtrack\\streamtrack.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|solutionrelative:streamtrack\\streamtrack.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|c:\\users\\ritzo\\desktop\\saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\csharp\\streamtrack\\streamtrack\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|solutionrelative:streamtrack\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|c:\\users\\ritzo\\desktop\\saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\csharp\\streamtrack\\streamtrack\\teszt.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|solutionrelative:streamtrack\\teszt.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|c:\\users\\ritzo\\desktop\\saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\csharp\\streamtrack\\streamtrack\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|solutionrelative:streamtrack\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|c:\\users\\ritzo\\desktop\\saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\csharp\\streamtrack\\streamtrack\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|solutionrelative:streamtrack\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|c:\\users\\ritzo\\desktop\\saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\csharp\\streamtrack\\streamtrack\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|solutionrelative:streamtrack\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|c:\\users\\ritzo\\desktop\\saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\csharp\\streamtrack\\streamtrack\\models\\streamingplatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,16 +47,8 @@
       "RelativeMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|solutionrelative:streamtrack\\streamtrack.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|c:\\users\\ritzo\\desktop\\saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\csharp\\streamtrack\\streamtrack\\teszt.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|solutionrelative:streamtrack\\teszt.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|c:\\users\\ritzo\\desktop\\saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\csharp\\streamtrack\\streamtrack\\controllers\\ratingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|solutionrelative:streamtrack\\controllers\\ratingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|c:\\users\\ritzo\\desktop\\saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\csharp\\streamtrack\\streamtrack\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96A8CFA8-B08B-94F1-1216-8B91615E7474}|StreamTrack\\StreamTrack.csproj|solutionrelative:streamtrack\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,19 +67,97 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "StreamTrackContext.cs",
+              "DocumentMoniker": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\Models\\StreamTrackContext.cs",
+              "RelativeDocumentMoniker": "StreamTrack\\Models\\StreamTrackContext.cs",
+              "ToolTip": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\Models\\StreamTrackContext.cs",
+              "RelativeToolTip": "StreamTrack\\Models\\StreamTrackContext.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAADwv10AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T08:52:47.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StreamTrack",
+              "DocumentMoniker": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\StreamTrack.csproj",
+              "RelativeDocumentMoniker": "StreamTrack\\StreamTrack.csproj",
+              "ToolTip": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\StreamTrack.csproj",
+              "RelativeToolTip": "StreamTrack\\StreamTrack.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-02T08:47:13.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "StreamTrack\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "StreamTrack\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAADYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T06:33:09.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "teszt.http",
+              "DocumentMoniker": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\teszt.http",
+              "RelativeDocumentMoniker": "StreamTrack\\teszt.http",
+              "ToolTip": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\teszt.http",
+              "RelativeToolTip": "StreamTrack\\teszt.http",
+              "ViewState": "AgIAACwAAAAAAAAAAAA/wD4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-06-02T08:04:54.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\Program.cs",
+              "RelativeDocumentMoniker": "StreamTrack\\Program.cs",
+              "ToolTip": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\Program.cs",
+              "RelativeToolTip": "StreamTrack\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAByAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T08:24:26.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "MoviesController.cs",
               "DocumentMoniker": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\Controllers\\MoviesController.cs",
               "RelativeDocumentMoniker": "StreamTrack\\Controllers\\MoviesController.cs",
               "ToolTip": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\Controllers\\MoviesController.cs",
               "RelativeToolTip": "StreamTrack\\Controllers\\MoviesController.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAowFsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAmwCQAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-02T07:57:24.891Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\appsettings.json",
+              "RelativeDocumentMoniker": "StreamTrack\\appsettings.json",
+              "ToolTip": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\appsettings.json",
+              "RelativeToolTip": "StreamTrack\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-02T08:23:50.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Streamingplatform.cs",
               "DocumentMoniker": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\Models\\Streamingplatform.cs",
               "RelativeDocumentMoniker": "StreamTrack\\Models\\Streamingplatform.cs",
@@ -71,12 +165,11 @@
               "RelativeToolTip": "StreamTrack\\Models\\Streamingplatform.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T06:45:41.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-02T06:45:41.623Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "StreamTrack.http",
               "DocumentMoniker": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\StreamTrack.http",
               "RelativeDocumentMoniker": "StreamTrack\\StreamTrack.http",
@@ -84,25 +177,11 @@
               "RelativeToolTip": "StreamTrack\\StreamTrack.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-06-02T08:04:20.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-02T08:04:20.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "teszt.http",
-              "DocumentMoniker": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\teszt.http",
-              "RelativeDocumentMoniker": "StreamTrack\\teszt.http",
-              "ToolTip": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\teszt.http",
-              "RelativeToolTip": "StreamTrack\\teszt.http",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAwDIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-06-02T08:04:54.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "teszt.http",
               "DocumentMoniker": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\teszt.http",
               "RelativeDocumentMoniker": "teszt.http",
@@ -110,12 +189,11 @@
               "RelativeToolTip": "teszt.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-06-02T07:25:10.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-02T07:25:10.315Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Ertekele.cs",
               "DocumentMoniker": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\Models\\Ertekele.cs",
               "RelativeDocumentMoniker": "StreamTrack\\Models\\Ertekele.cs",
@@ -123,12 +201,11 @@
               "RelativeToolTip": "StreamTrack\\Models\\Ertekele.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T06:49:35.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-02T06:49:35.902Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "RatingsController.cs",
               "DocumentMoniker": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\Controllers\\RatingsController.cs",
               "RelativeDocumentMoniker": "StreamTrack\\Controllers\\RatingsController.cs",
@@ -137,18 +214,6 @@
               "ViewState": "AgIAABwAAAAAAAAAAAAuwC4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-02T06:35:55.799Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "StreamTrack\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\ritzo\\Desktop\\Saj\u00E1t mini projektek\\streaming_film_ertekelo_es_koveto_oldal\\Csharp\\StreamTrack\\StreamTrack\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "StreamTrack\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAuwBYAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T06:33:09.58Z"
             }
           ]
         }
