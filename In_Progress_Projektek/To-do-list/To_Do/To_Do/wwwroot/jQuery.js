@@ -28,10 +28,10 @@ $(function () {
 
             $btnTorol.on('click', function () {
                 $(this).parent().slideUp(300);
+                $kli.text() = $nli.text();
             });
             $btnKezs.on('click', function () {
                 $(this).parent().slideDown(300);
-                $kli.text() = $nli.text();
             }
         }
     });
