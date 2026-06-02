@@ -1,5 +1,5 @@
-$(function () {
-
+$(function() {
+    /*
     const $ujFeladat = $('#feladatPlusz');
     const $nincsKesz = $('#nkLista');
     const $kesz = $('#kLista');
@@ -41,6 +41,21 @@ $(function () {
                 });
             });
         }
-    });
+    });*/
+    const $ujFeladat = $('#feladatPlusz');
+    const adatTarolo = [];
 
+    $ujFeladat.submit(function(e) {
+        e.preventDefault();
+
+        const $input = $('#feladat');
+        const feladat = $input.val().trim();
+
+        const now = new Date();
+        const month = now.getMonth() + 1;
+        const year = now.getFullYear();
+        const kulcsDate = year + "-" + month;
+
+        adatTarolo.push({f: feladat, date: kulcsDate, done: false })
+    });
 });
