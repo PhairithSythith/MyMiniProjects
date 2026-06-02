@@ -16,7 +16,8 @@ $(function () {
             const $btnKezs = $("<button type='button'>Kész</button>");
             const $nli = $("<li></li>").text(feladat);
             const $ntarol = $('<div class="ntarol"></div>');
-            const $kli = $("<li></li>").text(feladat);
+
+            const $kli = $("<li></li>");
             const $ktarol = $('<div class="ktarol"></div>');
             const $btnArch = $("<button type='button'>Archívumba mentés</button>");
 
@@ -30,7 +31,7 @@ $(function () {
             });
             $btnKezs.on('click', function () {
                 $(this).parent().slideDown(300);
-
+                $kli.text() = $nli.text();
             }
         }
     });
