@@ -32,19 +32,19 @@ CREATE TABLE IF NOT EXISTS `ertekeles` (
   KEY `felhID` (`felhID`),
   CONSTRAINT `ertekeles_ibfk_1` FOREIGN KEY (`filmID`) REFERENCES `film` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ertekeles_ibfk_2` FOREIGN KEY (`felhID`) REFERENCES `felhasznalo` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Az adatok exportálása nem lett kiválasztva.
 
 -- Struktúra mentése tábla streamtrack. felhasznalo
 CREATE TABLE IF NOT EXISTS `felhasznalo` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `Jelszo` varchar(30) NOT NULL,
+  `Jelszo` varchar(60) NOT NULL,
   `FelhNev` varchar(50) NOT NULL,
   `Email` varchar(100) NOT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `FelhNev` (`FelhNev`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Az adatok exportálása nem lett kiválasztva.
 
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `film` (
   `plakatKep` blob NOT NULL,
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Az adatok exportálása nem lett kiválasztva.
 

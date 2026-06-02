@@ -346,3 +346,5 @@ C:\Users\ritzo\Desktop\Saját mini projektek\streaming_film_ertekelo_es_koveto_o
 C:\Users\ritzo\Desktop\Saját mini projektek\streaming_film_ertekelo_es_koveto_oldal\Csharp\StreamTrack\StreamTrack\obj\Debug\net10.0\StreamTr.85B8B49C.Up2Date
 C:\Users\ritzo\Desktop\Saját mini projektek\streaming_film_ertekelo_es_koveto_oldal\Csharp\StreamTrack\StreamTrack\obj\Debug\net10.0\StreamTrack.genruntimeconfig.cache
 C:\Users\ritzo\Desktop\Saját mini projektek\streaming_film_ertekelo_es_koveto_oldal\Csharp\StreamTrack\StreamTrack\obj\Debug\net10.0\ref\StreamTrack.dll
+C:\Users\ritzo\Desktop\Saját mini projektek\streaming_film_ertekelo_es_koveto_oldal\Csharp\StreamTrack\StreamTrack\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ritzo\Desktop\Saját mini projektek\streaming_film_ertekelo_es_koveto_oldal\Csharp\StreamTrack\StreamTrack\bin\Debug\net10.0\BCrypt-Net-Next.dll
