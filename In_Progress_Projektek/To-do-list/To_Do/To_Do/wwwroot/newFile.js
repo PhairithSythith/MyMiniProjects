@@ -50,12 +50,14 @@ $(function() {
 
         const $input = $('#feladat');
         const feladat = $input.val().trim();
+        if (feladat != '' && feladat != null) {
+            const now = new Date();
+            const month = now.getMonth() + 1;
+            const year = now.getFullYear();
+            const kulcsDate = year + "-" + month;
 
-        const now = new Date();
-        const month = now.getMonth() + 1;
-        const year = now.getFullYear();
-        const kulcsDate = year + "-" + month;
-
-        adatTarolo.push({f: feladat, date: kulcsDate, done: false })
+            adatTarolo.push({ f: feladat, date: kulcsDate, done: false })
+        }
+        else return;
     });
 });
