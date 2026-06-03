@@ -38,23 +38,6 @@ $(function() {
                 const $ntarol = $('<div class="ntarol"></div>');
                 $ntarol.append($nli).append($btnTorol).append($btnKezs);
                 $nincsKesz.append($ntarol);
-
-                $btnKezs.on('click', function () {
-                    const id = $(this).data("id");
-                    const item = adatTarolo.find(function (x) {
-                        return x.id === id;
-                    });
-                    item.done = true;
-                    Render();
-                });
-                $btnTorol.on('click', function () {
-                    const id = $(this).data("id");
-                    const item = adatTarolo.find(function (x) {
-                        return x.id === id;
-                    });
-                    adatTarolo.splice(adatTarolo.indexOf(item), 1);
-                    Render();
-                });
             }
             else {
                 var item = adatTarolo[i];
@@ -68,19 +51,34 @@ $(function() {
                 $ktarol.append($kli).append($btnArchiv);
                 $kesz.append($ktarol);
 
-                $btnArchiv.on('click', function () {
-                    const id = $(this).data("id");
-                    const index = adatTarolo.findIndex(function (x) {
-                        return x.id === id;
-                    });
-                    adatArchiv.push(adatTarolo[index]);
-                    adatTarolo.splice(index, 1);
-                    Render();
-                });
             }
         }
     };
-    
+    $btnKezs.on('click', function () {
+        const id = $(this).data("id");
+        const item = adatTarolo.find(function (x) {
+            return x.id === id;
+        });
+        item.done = true;
+        Render();
+    });
+    $btnTorol.on('click', function () {
+        const id = $(this).data("id");
+        const item = adatTarolo.find(function (x) {
+            return x.id === id;
+        });
+        adatTarolo.splice(adatTarolo.indexOf(item), 1);
+        Render();
+    });
+    $btnArchiv.on('click', function () {
+        const id = $(this).data("id");
+        const index = adatTarolo.findIndex(function (x) {
+            return x.id === id;
+        });
+        adatArchiv.push(adatTarolo[index]);
+        adatTarolo.splice(index, 1);
+        Render();
+    });
 });
 
 
