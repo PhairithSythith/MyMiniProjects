@@ -8,41 +8,41 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="jQuery.js" defer></script>
 </head>
-    <body>
+<body>
 
-        <h1>
-            My To-Do List
-        </h1>
+    <h1>
+        My To-Do List
+    </h1>
 
-        <div id="datum"></div>
+    <div id="datum"></div>
 
-        <form id="feladatPlusz">
-            <label for="feladat">Új feladat:</label>
-            <input type="text" id="feladat" name="feladat">
-            <button type="submit">Hozzáad</button>
-        </form>
+    <form id="feladatPlusz">
+        <label for="feladat">Új feladat:</label>
+        <input type="text" id="feladat" name="feladat">
+        <button type="submit">Hozzáad</button>
+    </form>
 
-        <div id="nincsKesz">
-            <h2>Még el nem készült feladatok</h2>
-            <ul id="nkLista"></ul>
+    <div id="elorehaladas">
+        <h2>Előrehaladás eddig:</h2>
+        <div id="ehMutato"></div>
+    </div>
+
+    <div id="nincsKesz">
+        <h2>Még el nem készült feladatok</h2>
+        <ul id="nkLista"></ul>
+    </div>
+
+    <div id="kesz">
+        <h2>Kész feladatok</h2>
+        <ul id="kLista"></ul>
+    </div>
+
+    <div id="archiv">
+        <h2>Előző feladatok gyűjteménye</h2>
+        <div id="ahDoboz">
+            <select id="mikor"></select>
+            <ul id="archLista"></ul>
         </div>
-
-        <div id="kesz">
-            <h2>Kész feladatok</h2>
-            <ul id="kLista"></ul>
-        </div>
-
-        <div id="elorehaladas">
-            <h2>Előrehaladás eddig:</h2>
-            <div id="ehMutato"></div>
-        </div>
-
-        <div id="archiv">
-            <h2>Előző feladatok gyűjteménye</h2>
-            <div id="ahDoboz">
-                <select id="mikor"></select>
-                <ul id="archLista"></ul>
-            </div>
-        </div>
-    </body>
+    </div>
+</body>
     </html>
