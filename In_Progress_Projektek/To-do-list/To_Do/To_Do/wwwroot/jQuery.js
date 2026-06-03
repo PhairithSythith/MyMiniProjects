@@ -54,7 +54,7 @@ $(function() {
             }
         }
     };
-    $btnKezs.on('click', function () {
+    $(document).on('click', ".btnKezs", function () {
         const id = $(this).data("id");
         const item = adatTarolo.find(function (x) {
             return x.id === id;
@@ -62,7 +62,7 @@ $(function() {
         item.done = true;
         Render();
     });
-    $btnTorol.on('click', function () {
+    $(document).on('click', ".btnTorol", function () {
         const id = $(this).data("id");
         const item = adatTarolo.find(function (x) {
             return x.id === id;
@@ -70,7 +70,7 @@ $(function() {
         adatTarolo.splice(adatTarolo.indexOf(item), 1);
         Render();
     });
-    $btnArchiv.on('click', function () {
+    $(document).on('click', ".btnArchiv", function () {
         const id = $(this).data("id");
         const index = adatTarolo.findIndex(function (x) {
             return x.id === id;
