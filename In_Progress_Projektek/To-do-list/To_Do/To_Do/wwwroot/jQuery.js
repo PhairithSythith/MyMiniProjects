@@ -4,6 +4,7 @@ $(function() {
     var $nincsKesz = $('#nkLista');
     var $kesz = $('#kLista');
     const adatTarolo = [];
+    const adatArchiv = [];
 
     $ujFeladat.submit(function(e) {
         e.preventDefault();
@@ -15,48 +16,65 @@ $(function() {
             const year = now.getFullYear();
             const kulcsDate = year + "-" + month;
 
-            adatTarolo.push({ f: feladat, date: kulcsDate, done: false });
+            adatTarolo.push({id: Date.now(), f: feladat, date: kulcsDate, done: false });
             Render();
         }
         else return;
     });
     function Render() {
-
         $nincsKesz.empty();
+        $kesz.empty();
         for (let i = 0; i < adatTarolo.length; i++) {
             if (adatTarolo[i].done == false) {
                 let feladat = adatTarolo[i].f;
                 let kulcsDate = adatTarolo[i].date;
                 let done = adatTarolo[i].done;
-                const $btnTorol = $('<button type="button">Törlés</button>');
-                const $btnKezs = $('<button type="button">Kész</button>');
+                var $btnTorol = $('<button type="button">Törlés</button>');
+                $btnTorol.data("id", item.id);
+                var $btnKezs = $('<button type="button">Kész</button>');
+                $btnKezs.data("id", item.id);
                 const $nli = $('<li></li>').text(feladat + " " + kulcsDate);
                 const $ntarol = $('<div class="ntarol"></div>');
                 $ntarol.append($nli).append($btnTorol).append($btnKezs);
                 $nincsKesz.append($ntarol);
+
+                $btnKezs.on('click', function () {
+                    const id = $(this).data("id");
+                    const item = adatTarolo.find(function (x) {
+                        return x.id === id;
+                    });
+                    item.done = true;
+                    Render();
+                });
+                $btnTorol.on('click', function () {
+                    const id = $(this).data("id");
+                    const item = adatTarolo.find(function (x) {
+                        return x.id === id;
+                    });
+                    adatTarolo.splice(adatTarolo.indexOf(item), 1);
+                    Render();
+                });
             }
             else {
                 let feladat = adatTarolo[i].f;
                 let kulcsDate = adatTarolo[i].date;
                 let done = adatTarolo[i].done;
-                const $btnArchiv = $('<button type="button">Archívumba mentés</button>');
+                var $btnArchiv = $('<button type="button">Archívumba mentés</button>');
                 const $kli = $('<li></li>').text(feladat + " " + kulcsDate);
                 const $ktarol = $('<div class="ktarol"></div>');
                 $ktarol.append($kli).append($btnArchiv);
                 $kesz.append($ktarol);
-            };
-            $btnKezs.on('click', function () {
-                adatTarolo[i].done = true;
-                Render();
-            });
-            $btnTorol.on('click', function () {
-                adatTarolo.splice(i, 1);
-                Render();
-            });
-            $btnArchiv.on('click', function () {
-                adatTarolo.splice(i, 1);
-                Render();
-            });                     
+
+                $btnArchiv.on('click', function () {
+                    const id = $(this).data("id");
+                    const index = adatTarolo.findIndex(function (x) {
+                        return x.id === id;
+                    });
+                    adatArchiv.push(adatTarolo[index]);
+                    adatTarolo.splice(index, 1);
+                    Render();
+                });
+            }
         }
     };
     
