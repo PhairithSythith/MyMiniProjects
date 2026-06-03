@@ -71,6 +71,7 @@ $(function() {
         adatTarolo.splice(adatTarolo.indexOf(item), 1);
         Render();
     });
+
     $(document).on('click', ".btnArchiv", function () {
         const id = $(this).data("id");
         const index = adatTarolo.findIndex(function (x) {
