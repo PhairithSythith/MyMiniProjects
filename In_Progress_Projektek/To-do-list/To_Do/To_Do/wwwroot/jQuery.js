@@ -20,8 +20,7 @@ $(function() {
         }
         else return;
     });
-
-    Function Render(){
+    function Render(){
         for (let i = 0; i < adatTarolo.length; i++) {
             let feladat = adatTarolo[i].f;
             let kulcsDate = adatTarolo[i].date;
