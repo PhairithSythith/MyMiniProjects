@@ -78,8 +78,13 @@ $(function() {
         });
         adatArchiv.push(adatTarolo[index]);
         adatTarolo.splice(index, 1);
-        Render();
+        Archivalas();
     });
+
+    function Archivalas() {
+
+    }
+
 });
 
 
