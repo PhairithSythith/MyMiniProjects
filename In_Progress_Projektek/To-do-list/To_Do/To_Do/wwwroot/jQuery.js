@@ -102,7 +102,9 @@ $(function() {
         var $archLista = $("#archLista");
         $archLista.empty();
         for (let i = 0; i < adatArchiv.length; i++) {
-
+            if (adatArchiv[i].data === valasztottDatum) {
+                var $ali = $("<li></li>");
+            }
         }
     }
 
