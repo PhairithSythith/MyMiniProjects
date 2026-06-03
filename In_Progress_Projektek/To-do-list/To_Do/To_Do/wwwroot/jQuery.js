@@ -2,11 +2,11 @@ $(function() {
    
     const $ujFeladat = $('#feladatPlusz');
     var $nincsKesz = $('#nkLista');
+    var $kesz = $('#kLista');
     const adatTarolo = [];
 
     $ujFeladat.submit(function(e) {
         e.preventDefault();
-
         const $input = $('#feladat');
         const feladat = $input.val().trim();
         if (feladat != '' && feladat != null) {
@@ -15,27 +15,50 @@ $(function() {
             const year = now.getFullYear();
             const kulcsDate = year + "-" + month;
 
-            adatTarolo.push({ f: feladat, date: kulcsDate, done: false })
+            adatTarolo.push({ f: feladat, date: kulcsDate, done: false });
             Render();
         }
         else return;
     });
-    function Render(){
+    function Render() {
+
+        $nincsKesz.empty();
         for (let i = 0; i < adatTarolo.length; i++) {
-            let feladat = adatTarolo[i].f;
-            let kulcsDate = adatTarolo[i].date;
-            let done = adatTarolo[i].done;
-            const $btnTorol = $('<button type="button">Törlés</button>');
-            const $btnKezs = $('<button type="button">Kész</button>');
-            const $nli = $('<li></li>').text(feladat + " " + done + " " + kulcsDate);
-            const $ntarol = $('<div class="ntarol"></div>');
-            $ntarol.append($nli).append($btnTorol).append($btnKezs);
-            $nincsKesz.append($ntarol);
+            if (adatTarolo[i].done == false) {
+                let feladat = adatTarolo[i].f;
+                let kulcsDate = adatTarolo[i].date;
+                let done = adatTarolo[i].done;
+                const $btnTorol = $('<button type="button">Törlés</button>');
+                const $btnKezs = $('<button type="button">Kész</button>');
+                const $nli = $('<li></li>').text(feladat + " " + kulcsDate);
+                const $ntarol = $('<div class="ntarol"></div>');
+                $ntarol.append($nli).append($btnTorol).append($btnKezs);
+                $nincsKesz.append($ntarol);
+            }
+            else {
+                let feladat = adatTarolo[i].f;
+                let kulcsDate = adatTarolo[i].date;
+                let done = adatTarolo[i].done;
+                const $btnArchiv = $('<button type="button">Archívumba mentés</button>');
+                const $kli = $('<li></li>').text(feladat + " " + kulcsDate);
+                const $ktarol = $('<div class="ktarol"></div>');
+                $ktarol.append($kli).append($btnArchiv);
+                $kesz.append($ktarol);
+            };
+            $btnKezs.on('click', function () {
+                adatTarolo[i].done = true;
+                Render();
+            });
+            $btnTorol.on('click', function () {
+                adatTarolo.splice(i, 1);
+                Render();
+            });
+            $btnArchiv.on('click', function () {
+                adatTarolo.splice(i, 1);
+                Render();
+            });                     
         }
     };
-
-    Function 
-
     
 });
 
