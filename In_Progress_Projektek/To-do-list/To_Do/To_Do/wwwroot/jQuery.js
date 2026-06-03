@@ -82,7 +82,9 @@ $(function() {
     });
 
     function Archivalas() {
+        for (let i = 0; i < adatArchiv.length; i++) {
 
+        }
     }
 
 });
