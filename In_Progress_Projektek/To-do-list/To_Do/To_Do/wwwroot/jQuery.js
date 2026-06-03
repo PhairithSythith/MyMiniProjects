@@ -26,13 +26,14 @@ $(function() {
         $kesz.empty();
         for (let i = 0; i < adatTarolo.length; i++) {
             if (adatTarolo[i].done == false) {
+                var item = adatTarolo[i];
                 let feladat = adatTarolo[i].f;
                 let kulcsDate = adatTarolo[i].date;
                 let done = adatTarolo[i].done;
                 var $btnTorol = $('<button type="button">Törlés</button>');
-                $btnTorol.data("id", i.id);
+                $btnTorol.data("id", item.id);
                 var $btnKezs = $('<button type="button">Kész</button>');
-                $btnKezs.data("id", i.id);
+                $btnKezs.data("id", item.id);
                 const $nli = $('<li></li>').text(feladat + " " + kulcsDate);
                 const $ntarol = $('<div class="ntarol"></div>');
                 $ntarol.append($nli).append($btnTorol).append($btnKezs);
@@ -56,10 +57,12 @@ $(function() {
                 });
             }
             else {
+                var item = adatTarolo[i];
                 let feladat = adatTarolo[i].f;
                 let kulcsDate = adatTarolo[i].date;
                 let done = adatTarolo[i].done;
                 var $btnArchiv = $('<button type="button">Archívumba mentés</button>');
+                $btnArchiv.data("id", item.id);
                 const $kli = $('<li></li>').text(feladat + " " + kulcsDate);
                 const $ktarol = $('<div class="ktarol"></div>');
                 $ktarol.append($kli).append($btnArchiv);
