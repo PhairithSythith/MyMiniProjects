@@ -30,9 +30,9 @@ $(function() {
                 let feladat = adatTarolo[i].f;
                 let kulcsDate = adatTarolo[i].date;
                 let done = adatTarolo[i].done;
-                var $btnTorol = $('<button type="button">Törlés</button>');
+                var $btnTorol = $('<button type="button" class="btnTorol">Törlés</button>');
                 $btnTorol.data("id", item.id);
-                var $btnKezs = $('<button type="button">Kész</button>');
+                var $btnKezs = $('<button type="button" class="btnKezs">Kész</button>');
                 $btnKezs.data("id", item.id);
                 const $nli = $('<li></li>').text(feladat + " " + kulcsDate);
                 const $ntarol = $('<div class="ntarol"></div>');
@@ -44,7 +44,7 @@ $(function() {
                 let feladat = adatTarolo[i].f;
                 let kulcsDate = adatTarolo[i].date;
                 let done = adatTarolo[i].done;
-                var $btnArchiv = $('<button type="button">Archívumba mentés</button>');
+                var $btnArchiv = $('<button type="button" class="btnArchiv">Archívumba mentés</button>');
                 $btnArchiv.data("id", item.id);
                 const $kli = $('<li></li>').text(feladat + " " + kulcsDate);
                 const $ktarol = $('<div class="ktarol"></div>');
