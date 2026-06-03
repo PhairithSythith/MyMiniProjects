@@ -98,7 +98,9 @@ $(function() {
         }
     }
 
-    function Archivalas() {
+    function Archivalas(valasztottDatum) {
+        var $archLista = $("#archLista");
+        $archLista.empty();
         for (let i = 0; i < adatArchiv.length; i++) {
 
         }
