@@ -35,7 +35,7 @@ $(function() {
                 $btnTorol.data("id", item.id);
                 var $btnKezs = $('<button type="button" class="btnKezs">Kész</button>');
                 $btnKezs.data("id", item.id);
-                const $nli = $('<li></li>').text(feladat + " " + kulcsDate);
+                const $nli = $('<li></li>').text(feladat + ", hozzá adva: " + kulcsDate);
                 const $ntarol = $('<div class="ntarol"></div>');
                 $ntarol.append($nli).append($btnTorol).append($btnKezs);
                 $nincsKesz.append($ntarol);
