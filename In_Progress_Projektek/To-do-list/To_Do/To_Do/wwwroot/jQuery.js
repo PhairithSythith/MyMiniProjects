@@ -1,7 +1,7 @@
 $(function() {
    
     const $ujFeladat = $('#feladatPlusz');
-    const $nincsKesz = $('#nkLista');
+    var $nincsKesz = $('#nkLista');
     const adatTarolo = [];
 
     $ujFeladat.submit(function(e) {
