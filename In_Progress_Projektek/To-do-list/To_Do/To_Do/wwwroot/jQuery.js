@@ -18,6 +18,7 @@ $(function() {
 
             adatTarolo.push({id: Date.now(), f: feladat, date: kulcsDate, done: false });
             Render();
+            $input.val('');
         }
         else return;
     });
