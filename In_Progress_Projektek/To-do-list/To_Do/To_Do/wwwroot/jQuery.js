@@ -28,8 +28,8 @@ $(function() {
             let done = adatTarolo[i].done;
             const $btnTorol = $('<button type="button">Törlés</button>');
             const $btnKezs = $('<button type="button">Kész</button>');
-            const $kli = $('<li></li>').text(feladat + " " + done + " " + kulcsDate);
-            const $ktarol = $('<div class="ktarol"></div>');
+            const $nli = $('<li></li>').text(feladat + " " + done + " " + kulcsDate);
+            const $ntarol = $('<div class="ntarol"></div>');
             $ntarol.append($nli).append($btnTorol).append($btnKezs);
             $nincsKesz.append($ntarol);
         }
