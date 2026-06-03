@@ -16,9 +16,28 @@ $(function() {
             const kulcsDate = year + "-" + month;
 
             adatTarolo.push({ f: feladat, date: kulcsDate, done: false })
+            Render();
         }
         else return;
     });
+
+    Function Render(){
+        for (let i = 0; i < adatTarolo.length; i++) {
+            let feladat = adatTarolo[i].f;
+            let kulcsDate = adatTarolo[i].date;
+            let done = adatTarolo[i].done;
+            const $btnTorol = $('<button type="button">Törlés</button>');
+            const $btnKezs = $('<button type="button">Kész</button>');
+            const $kli = $('<li></li>').text(feladat + " " + done + " " + kulcsDate);
+            const $ktarol = $('<div class="ktarol"></div>');
+            $ntarol.append($nli).append($btnTorol).append($btnKezs);
+            $nincsKesz.append($ntarol);
+        }
+    };
+
+    Function 
+
+    
 });
 
 
