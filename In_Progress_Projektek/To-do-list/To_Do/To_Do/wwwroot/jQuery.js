@@ -90,6 +90,9 @@ $(function() {
                 egyedi.push(adatArchiv[i].date);
             }
         }
+        for (let i = 0; i < egyedi.length; i++) {
+            var $option = $("<option></option>");
+        }
     }
 
     function Archivalas() {
