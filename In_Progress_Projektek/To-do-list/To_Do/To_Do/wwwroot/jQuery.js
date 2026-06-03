@@ -30,9 +30,9 @@ $(function() {
                 let kulcsDate = adatTarolo[i].date;
                 let done = adatTarolo[i].done;
                 var $btnTorol = $('<button type="button">Törlés</button>');
-                $btnTorol.data("id", item.id);
+                $btnTorol.data("id", i.id);
                 var $btnKezs = $('<button type="button">Kész</button>');
-                $btnKezs.data("id", item.id);
+                $btnKezs.data("id", i.id);
                 const $nli = $('<li></li>').text(feladat + " " + kulcsDate);
                 const $ntarol = $('<div class="ntarol"></div>');
                 $ntarol.append($nli).append($btnTorol).append($btnKezs);
