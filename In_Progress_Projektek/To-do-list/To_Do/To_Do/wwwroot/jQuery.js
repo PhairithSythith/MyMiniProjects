@@ -78,7 +78,12 @@ $(function() {
         });
         adatArchiv.push(adatTarolo[index]);
         adatTarolo.splice(index, 1);
-        Archivalas();
+        SelectFrissites();
+        var selected = $("#mikor").val();
+        if (selected !== null) {
+            Archivalas(selected);
+        }
+        Render();
     });
 
     function SelectFrissites() {
@@ -104,14 +109,14 @@ $(function() {
         for (let i = 0; i < adatArchiv.length; i++) {
             if (adatArchiv[i].date === valasztottDatum) {
                 var $li = $('<li></li>').text(adatArchiv[i].f + " (" + adatArchiv[i].date + ")");
-                $lista.append($li);
+                $archLista.append($li);
             }
         }
     }
 
 
     $('#mikor').on('change', function () {
-        RenderArchiv($(this).val());
+        Archivalas($(this).val());
     });
 
 });
