@@ -102,11 +102,17 @@ $(function() {
         var $archLista = $("#archLista");
         $archLista.empty();
         for (let i = 0; i < adatArchiv.length; i++) {
-            if (adatArchiv[i].data === valasztottDatum) {
-                var $ali = $("<li></li>");
+            if (adatArchiv[i].date === valasztottDatum) {
+                var $li = $('<li></li>').text(adatArchiv[i].f + " (" + adatArchiv[i].date + ")");
+                $lista.append($li);
             }
         }
     }
+
+
+    $('#mikor').on('change', function () {
+        RenderArchiv($(this).val());
+    });
 
 });
 
