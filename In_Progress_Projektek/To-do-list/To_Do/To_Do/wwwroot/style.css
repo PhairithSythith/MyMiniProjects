@@ -6,14 +6,13 @@
 body {
     margin: 0;
     display: block;
-    overflow-y: hidden;
     background-color: rgba(115, 73, 0, 0.4);
     color: rgba(115, 73, 0, 1);
 }
 #tarolo {
     margin: 0 auto;
     width: 95vw;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(255, 206, 96, 0.5);
     display: flex;
     flex-direction: column;
@@ -39,21 +38,36 @@ input:focus {
         border: 2px solid rgba(115, 73, 0, 1);
         outline: none;
 }
-#nincsKesz{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    align-content:center;
-}
 ul {
     list-style: none;
+}
+#nkLista , #kLista , #archLista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+#archLista {
+    background: rgba(255,255,255,0.4);
+    padding: 5px;
+}
+li {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    padding: 5px;
+    margin: 5px 0;
+    background: rgba(255,255,255,0.4);
+    border-radius: 10px;
 }
 #hozzaAd, .btnKezs, .btnTorol, .btnArchiv, select {
     width: 80px;
     height: auto;
     padding: 3px;
-    background-color: beige;
+    background-color: beige;a
     color: rgba(115, 73, 0, 0.5);
     border-radius: 10px;
     border: 2px solid rgba(115, 73, 0, 0.5);
