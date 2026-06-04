@@ -7,6 +7,7 @@ body {
     margin: 0;
     display: block;
     overflow-y:hidden;
+    background-color:rgba(115, 73, 0, 0.5);
 }
 #tarolo {
     margin: 0 auto;
