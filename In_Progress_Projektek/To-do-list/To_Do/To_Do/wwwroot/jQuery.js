@@ -1,5 +1,4 @@
-$(function() {
-   
+$(function () {
     const $ujFeladat = $('#feladatPlusz');
     var $nincsKesz = $('#nkLista');
     var $kesz = $('#kLista');
@@ -8,7 +7,7 @@ $(function() {
     var $ahDoboz = $('#ahDoboz').hide();
     var $ehMutato = $('#ehMutato');
 
-    $ujFeladat.submit(function(e) {
+    $ujFeladat.submit(function (e) {
         e.preventDefault();
         const $input = $('#feladat');
         const feladat = $input.val().trim();
@@ -17,13 +16,13 @@ $(function() {
             const month = now.getMonth() + 1;
             const year = now.getFullYear();
             const kulcsDate = year + "-" + month;
-
-            adatTarolo.push({id: Date.now(), f: feladat, date: kulcsDate, done: false });
+            adatTarolo.push({ id: Date.now(), f: feladat, date: kulcsDate, done: false });
             Render();
             $input.val('');
         }
         else return;
     });
+
     function Render() {
         $nincsKesz.empty();
         $kesz.empty();
@@ -41,7 +40,7 @@ $(function() {
                 $ntarol.append($nli).append($btnKezs).append($btnTorol);
                 $ntarol.hide();
                 $nincsKesz.append($ntarol);
-                $ntarol.slideDown(300);
+                $ntarol.fadeIn(400);
             }
             else {
                 var item = adatTarolo[i];
@@ -54,33 +53,36 @@ $(function() {
                 $ktarol.append($kli).append($btnArchiv);
                 $ktarol.hide();
                 $kesz.append($ktarol);
-                $ktarol.slideDown(300);
+                $ktarol.fadeIn(400);
             }
         }
         Haladas();
     };
+
     $(document).on('click', ".btnKezs", function () {
-            const id = $(this).data("id");
-            const item = adatTarolo.find(function (x) {
-                return x.id === id;
-            });
-        $(this).parent().slideUp(300, function () {
+        const id = $(this).data("id");
+        const item = adatTarolo.find(function (x) {
+            return x.id === id;
+        });
+        $(this).parent().fadeOut(400, function () {
             item.done = true;
             Render();
         });
     });
+
     $(document).on('click', ".btnTorol", function () {
         const id = $(this).data("id");
         const item = adatTarolo.find(function (x) {
             return x.id === id;
         });
         adatTarolo.splice(adatTarolo.indexOf(item), 1);
-        $(this).parent().slideUp(300, function () {
+        $(this).parent().fadeOut(400, function () {
             Render();
         });
     });
 
     $(document).on('click', ".btnArchiv", function () {
+
         const id = $(this).data("id");
         const index = adatTarolo.findIndex(function (x) {
             return x.id === id;
@@ -92,7 +94,7 @@ $(function() {
         if (selected !== null) {
             Archivalas(selected);
         }
-        $(this).parent().slideUp(300, function () {
+        $(this).parent().fadeOut(200, function () {
             Render();
         });
     });
@@ -112,7 +114,7 @@ $(function() {
             $option.text(egyedi[i]);
             $select.append($option);
         }
-        $ahDoboz.slideDown(300);
+        $ahDoboz.slideDown(200);
     }
 
     function Archivalas(valasztottDatum) {
@@ -120,12 +122,13 @@ $(function() {
         $archLista.empty();
         for (let i = 0; i < adatArchiv.length; i++) {
             if (adatArchiv[i].date === valasztottDatum) {
-                var $li = $('<li></li>').text(adatArchiv[i].f + " (" + adatArchiv[i].date + ") 😴");
+                var $li = $('<li></li>').text(
+                    adatArchiv[i].f + " (" + adatArchiv[i].date + ") 😴"
+                );
                 $archLista.append($li);
             }
         }
     }
-
     $('#mikor').on('change', function () {
         Archivalas($(this).val());
     });
@@ -144,7 +147,6 @@ $(function() {
                 szoveg += '🥺';
             }
         }
-        $ehMutato.hide().text(szoveg).fadeIn(300);
+        $ehMutato.text(szoveg);
     }
-
 });
