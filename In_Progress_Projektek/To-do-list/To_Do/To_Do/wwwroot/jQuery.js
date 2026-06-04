@@ -126,7 +126,7 @@ $(function() {
 
     function Haladas() {
         if (adatTarolo.length === 0) {
-            $ehMutato.text('');
+            $ehMutato.text('Minden kész 🥳');
             return;
         }
         var szoveg = '';
