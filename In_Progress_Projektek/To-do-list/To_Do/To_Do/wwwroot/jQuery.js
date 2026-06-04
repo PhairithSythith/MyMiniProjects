@@ -6,8 +6,6 @@ $(function() {
     const adatTarolo = [];
     const adatArchiv = [];
     var $ahDoboz = $('#ahDoboz').hide();
-    var ndb = 0;
-    var kdb = 0;
     var $ehMutato = $('#ehMutato');
 
     $ujFeladat.submit(function(e) {
@@ -34,7 +32,6 @@ $(function() {
                 var item = adatTarolo[i];
                 let feladat = adatTarolo[i].f;
                 let kulcsDate = adatTarolo[i].date;
-                let done = adatTarolo[i].done;
                 var $btnKezs = $('<button type="button" class="btnKezs">Kész</button>');
                 $btnKezs.data("id", item.id);
                 var $btnTorol = $('<button type="button" class="btnTorol">Törlés</button>');
