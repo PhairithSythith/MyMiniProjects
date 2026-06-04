@@ -118,7 +118,7 @@ $(function () {
     }
 
     function Archivalas(valasztottDatum) {
-        var $archLista = $("#archLista");
+        var $archLista = $("#archLista").hide();
         $archLista.empty();
         for (let i = 0; i < adatArchiv.length; i++) {
             if (adatArchiv[i].date === valasztottDatum) {
