@@ -115,7 +115,6 @@ $(function() {
         }
     }
 
-
     $('#mikor').on('change', function () {
         Archivalas($(this).val());
     });
