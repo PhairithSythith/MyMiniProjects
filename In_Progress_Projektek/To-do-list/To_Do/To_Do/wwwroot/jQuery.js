@@ -134,19 +134,19 @@ $(function () {
     });
 
     function Haladas() {
-        if (adatTarolo.length === 0) {
-            $ehMutato.text('Minden kész 🥳');
+        $ehMutato.hide();
+        if (adatTarolo.length === 0)
+        {
+            $ehMutato.text('Minden kész 🥳').fadeIn(400);
             return;
         }
         var szoveg = '';
-        for (let i = 0; i < adatTarolo.length; i++) {
-            if (adatTarolo[i].done == true) {
-                szoveg += '😀';
-            }
-            else {
-                szoveg += '🥺';
-            }
+        for (let i = 0; i < adatTarolo.length; i++)
+        {
+            if (adatTarolo[i].done == true)
+            { szoveg += '😀'; }
+            else { szoveg += '🥺'; }
         }
-        $ehMutato.text(szoveg);
+        $ehMutato.hide().text(szoveg).fadeIn(400);
     }
 });

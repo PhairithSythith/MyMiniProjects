@@ -1,0 +1,37 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+body {
+        width: 90%;
+        margin: 0 auto;
+        background-color: rgba(255, 206, 96, 0.5);
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+input {
+    border-radius: 10px;
+    border: 2px solid #ff7f0e;
+    outline: none;
+}
+input:focus {
+        border: 2px solid #aa9819;
+        outline: none;
+}
+#hozzaAd{
+    width: 80px;
+    height: auto;
+    background-color:brown;
+    color: beige;
+    border-radius:10px;
+    border: 2px solid #ff7f0e
+}
