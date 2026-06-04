@@ -45,7 +45,6 @@ $(function() {
                 var item = adatTarolo[i];
                 let feladat = adatTarolo[i].f;
                 let kulcsDate = adatTarolo[i].date;
-                let done = adatTarolo[i].done;
                 var $btnArchiv = $('<button type="button" class="btnArchiv">Archívumba mentés</button>');
                 $btnArchiv.data("id", item.id);
                 const $kli = $('<li></li>').text(feladat + " " + kulcsDate);
@@ -61,8 +60,8 @@ $(function() {
             const item = adatTarolo.find(function (x) {
                 return x.id === id;
             });
-        item.done = true;
-        $(this).parent().slideUp(200, function () {
+        $(this).parent().slideUp(400, function () {
+            item.done = true;
             Render();
         });
     });
@@ -72,7 +71,7 @@ $(function() {
             return x.id === id;
         });
         adatTarolo.splice(adatTarolo.indexOf(item), 1);
-        $(this).parent().slideUp(200, function () {
+        $(this).parent().slideUp(400, function () {
             Render();
         });
     });
@@ -89,7 +88,9 @@ $(function() {
         if (selected !== null) {
             Archivalas(selected);
         }
-        Render();
+        $(this).parent().slideUp(200, function () {
+            Render();
+        });
     });
 
     function SelectFrissites() {
@@ -139,7 +140,7 @@ $(function() {
                 szoveg += '🥺';
             }
         }
-        $ehMutato.text(szoveg);
+        $ehMutato.hide().text(szoveg).fadeIn(200);
     }
 
 });
