@@ -93,6 +93,7 @@ $(function() {
     function SelectFrissites() {
         $select.show();
         $select.empty();
+        const $ahDoboz = $('#ahDoboz');
         var egyedi = [];
         for (let i = 0; i < adatArchiv.length; i++) {
             if (egyedi.indexOf(adatArchiv[i].date) === -1) {
@@ -104,6 +105,7 @@ $(function() {
             $option.val(egyedi[i]);
             $option.text(egyedi[i]);
             $select.append($option);
+            $ahDoboz.append($select);
         }
     }
 
