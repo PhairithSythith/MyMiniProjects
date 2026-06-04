@@ -5,9 +5,10 @@ $(function() {
     var $kesz = $('#kLista');
     const adatTarolo = [];
     const adatArchiv = [];
-
-    var $select = $('#mikor');
-    $select.hide();
+    var $ahDoboz = $('#ahDoboz').hide();
+    var ndb = 0;
+    var kdb = 0;
+    var $ehMutato = $('#ehMutato');
 
     $ujFeladat.submit(function(e) {
         e.preventDefault();
@@ -30,6 +31,7 @@ $(function() {
         $kesz.empty();
         for (let i = 0; i < adatTarolo.length; i++) {
             if (adatTarolo[i].done == false) {
+                ndb++;
                 var item = adatTarolo[i];
                 let feladat = adatTarolo[i].f;
                 let kulcsDate = adatTarolo[i].date;
@@ -44,6 +46,7 @@ $(function() {
                 $nincsKesz.append($ntarol);
             }
             else {
+                kdb++; ndb--;
                 var item = adatTarolo[i];
                 let feladat = adatTarolo[i].f;
                 let kulcsDate = adatTarolo[i].date;
@@ -54,17 +57,16 @@ $(function() {
                 const $ktarol = $('<div class="ktarol"></div>');
                 $ktarol.append($kli).append($btnArchiv);
                 $kesz.append($ktarol);
-
             }
         }
     };
     $(document).on('click', ".btnKezs", function () {
-        const id = $(this).data("id");
-        const item = adatTarolo.find(function (x) {
-            return x.id === id;
-        });
-        item.done = true;
-        Render();
+            const id = $(this).data("id");
+            const item = adatTarolo.find(function (x) {
+                return x.id === id;
+            });
+            item.done = true;
+            Render();
     });
     $(document).on('click', ".btnTorol", function () {
         const id = $(this).data("id");
@@ -91,9 +93,8 @@ $(function() {
     });
 
     function SelectFrissites() {
-        $select.show();
+        var $select = $('#mikor');
         $select.empty();
-        const $ahDoboz = $('#ahDoboz');
         var egyedi = [];
         for (let i = 0; i < adatArchiv.length; i++) {
             if (egyedi.indexOf(adatArchiv[i].date) === -1) {
@@ -105,8 +106,8 @@ $(function() {
             $option.val(egyedi[i]);
             $option.text(egyedi[i]);
             $select.append($option);
-            $ahDoboz.append($select);
         }
+        $ahDoboz.slideToggle(200);
     }
 
     function Archivalas(valasztottDatum) {
