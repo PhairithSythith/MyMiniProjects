@@ -6,7 +6,10 @@ $(function() {
     const adatTarolo = [];
     const adatArchiv = [];
 
-    $ujFeladat.submit(function(e) {
+    var $btnArchiv = $('<button type="button" class="btnArchiv">Archívumba mentés</button>');
+    $btnArchiv.hide();
+
+    $ujFeladat.submit(function (e) {
         e.preventDefault();
         const $input = $('#feladat');
         const feladat = $input.val().trim();
@@ -45,7 +48,6 @@ $(function() {
                 let feladat = adatTarolo[i].f;
                 let kulcsDate = adatTarolo[i].date;
                 let done = adatTarolo[i].done;
-                var $btnArchiv = $('<button type="button" class="btnArchiv">Archívumba mentés</button>');
                 $btnArchiv.data("id", item.id);
                 const $kli = $('<li></li>').text(feladat + " " + kulcsDate);
                 const $ktarol = $('<div class="ktarol"></div>');
