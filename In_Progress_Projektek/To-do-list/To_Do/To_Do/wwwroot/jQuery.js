@@ -56,6 +56,7 @@ $(function() {
                 $ktarol.append($kli).append($btnArchiv);
                 $kesz.append($ktarol);
             }
+            Haladas();
         }
     };
     $(document).on('click', ".btnKezs", function () {
@@ -124,12 +125,20 @@ $(function() {
     });
 
     function Haladas() {
+        var vanBefejezetlen = false;
+
         for (let i = 0; i < adatTarolo.length; i++) {
             if (adatTarolo[i].done == false) {
-                $ehMutato = '🥺';
+                vanBefejezetlen = true;
+                break;
             }
+        }
 
-            $ehMutato += '😀';
+        if (vanBefejezetlen) {
+            $ehMutato.text('🥺');
+        }
+        else {
+            $ehMutato.text('😀');
         }
     }
 
