@@ -92,7 +92,7 @@ $(function() {
         if (selected !== null) {
             Archivalas(selected);
         }
-        $(this).parent().slideUp(200, function () {
+        $(this).parent().slideUp(400, function () {
             Render();
         });
     });
@@ -144,7 +144,7 @@ $(function() {
                 szoveg += '🥺';
             }
         }
-        $ehMutato.hide().text(szoveg).fadeIn(200);
+        $ehMutato.hide().text(szoveg).fadeIn(400);
     }
 
 });
