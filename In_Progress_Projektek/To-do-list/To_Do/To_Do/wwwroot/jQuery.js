@@ -103,7 +103,7 @@ $(function() {
             $option.text(egyedi[i]);
             $select.append($option);
         }
-        $ahDoboz.slideToggle(200);
+        $ahDoboz.slideDown(200);
     }
 
     function Archivalas(valasztottDatum) {
