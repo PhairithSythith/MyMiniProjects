@@ -104,7 +104,7 @@ $(function () {
         $select.empty();
         var egyedi = ["Válassz dátumot"];
         for (let i = 0; i < adatArchiv.length; i++) {
-            if (egyedi.indexOf(adatArchiv[i].date) === 1) {
+            if (egyedi.indexOf(adatArchiv[i].date) === -1) {
                 egyedi.push(adatArchiv[i].date);
             }
         }
