@@ -118,7 +118,7 @@ $(function () {
     }
 
     function Archivalas(valasztottDatum) {
-        var $archLista = $("#archLista").hide();
+        var $archLista = $("#archLista");
         $archLista.empty();
         for (let i = 0; i < adatArchiv.length; i++) {
             if (adatArchiv[i].date === valasztottDatum) {
@@ -131,7 +131,7 @@ $(function () {
     }
     $('#mikor').on('change', function () {
         Archivalas($(this).val());
-    });
+    }).slideDown(200);
 
     function Haladas() {
         $ehMutato.hide();
