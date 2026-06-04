@@ -17,6 +17,8 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
 }
 form {
     display: flex;
@@ -63,6 +65,7 @@ select, option{
     background-color: beige;
     border-radius: 10px;
     border: 2px solid rgba(115, 73, 0, 0.5);
+    o
 }
 ul{
     list-style:none;
