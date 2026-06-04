@@ -82,7 +82,6 @@ $(function () {
     });
 
     $(document).on('click', ".btnArchiv", function () {
-
         const id = $(this).data("id");
         const index = adatTarolo.findIndex(function (x) {
             return x.id === id;
@@ -126,12 +125,11 @@ $(function () {
                     adatArchiv[i].f + " (" + adatArchiv[i].date + ") 😴"
                 );
                 $archLista.append($li);
-            }
-        }
-    }
+            }}};
+
     $('#mikor').on('change', function () {
         Archivalas($(this).val());
-    }).slideDown(200);
+    });
 
     function Haladas() {
         $ehMutato.hide();
