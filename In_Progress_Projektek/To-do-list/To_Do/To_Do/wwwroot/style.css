@@ -4,13 +4,19 @@
     padding:0;
 }
 body {
-        width: 90%;
-        margin: 0 auto;
-        background-color: rgba(255, 206, 96, 0.5);
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        gap:10px;
+    margin: 0;
+    display: block;
+    overflow-y:hidden;
+}
+#tarolo {
+    margin: 0 auto;
+    width: 95vw;
+    height: 100vw;
+    background-color: rgba(255, 206, 96, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 form {
     display: flex;
@@ -19,19 +25,45 @@ form {
     align-items: center;
 }
 input {
+    padding: 3px 10px;
+    width:250px;
     border-radius: 10px;
-    border: 2px solid #ff7f0e;
+    border: 2px solid rgba(115, 73, 0, 0.5);
     outline: none;
 }
 input:focus {
-        border: 2px solid #aa9819;
+        border: 2px solid rgba(115, 73, 0, 1);
         outline: none;
 }
-#hozzaAd{
+#hozzaAd, .btnKezs, .btnTorol, .btnArchiv, select {
     width: 80px;
     height: auto;
-    background-color:brown;
-    color: beige;
-    border-radius:10px;
-    border: 2px solid #ff7f0e
+    padding: 3px;
+    background-color: beige;
+    color: rgba(115, 73, 0, 0.5);
+    border-radius: 10px;
+    border: 2px solid rgba(115, 73, 0, 0.5);
+}
+select, option{
+    color: saddlebrown;
+}
+.btnKezs, .btnTorol{
+    width:50px;
+    margin:5px;
+}
+#elorehaladas, #nincsKesz, #kesz, #archiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+#ehMutato {
+    padding:5px;
+    background-color: beige;
+    border-radius: 10px;
+    border: 2px solid rgba(115, 73, 0, 0.5);
+}
+ul{
+    list-style:none;
 }
