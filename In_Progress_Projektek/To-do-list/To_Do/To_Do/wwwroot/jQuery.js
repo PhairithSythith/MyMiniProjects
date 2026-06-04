@@ -31,10 +31,10 @@ $(function() {
                 let feladat = adatTarolo[i].f;
                 let kulcsDate = adatTarolo[i].date;
                 let done = adatTarolo[i].done;
-                var $btnTorol = $('<button type="button" class="btnTorol">Törlés</button>');
-                $btnTorol.data("id", item.id);
                 var $btnKezs = $('<button type="button" class="btnKezs">Kész</button>');
                 $btnKezs.data("id", item.id);
+                var $btnTorol = $('<button type="button" class="btnTorol">Törlés</button>');
+                $btnTorol.data("id", item.id);
                 const $nli = $('<li></li>').text(feladat + ", hozzá adva: " + kulcsDate);
                 const $ntarol = $('<div class="ntarol"></div>');
                 $ntarol.append($nli).append($btnKezs).append($btnTorol);
