@@ -39,7 +39,9 @@ $(function() {
                 const $nli = $('<li></li>').text(feladat + ", hozzá adva: " + kulcsDate);
                 const $ntarol = $('<div class="ntarol"></div>');
                 $ntarol.append($nli).append($btnKezs).append($btnTorol);
+                $ntarol.hide();
                 $nincsKesz.append($ntarol);
+                $ntarol.slideDown(300);
             }
             else {
                 var item = adatTarolo[i];
@@ -50,7 +52,9 @@ $(function() {
                 const $kli = $('<li></li>').text(feladat + " " + kulcsDate);
                 const $ktarol = $('<div class="ktarol"></div>');
                 $ktarol.append($kli).append($btnArchiv);
+                $ktarol.hide();
                 $kesz.append($ktarol);
+                $ktarol.slideDown(300);
             }
         }
         Haladas();
