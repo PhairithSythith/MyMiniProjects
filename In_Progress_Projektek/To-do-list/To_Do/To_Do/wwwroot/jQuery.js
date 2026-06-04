@@ -5,7 +5,7 @@ $(function () {
     const adatTarolo = [];
     const adatArchiv = [];
     var $ahDoboz = $('#ahDoboz').hide();
-    var $ehMutato = $('#ehMutato');
+    var $ehMutato = $('#ehMutato').hide();
 
     $ujFeladat.submit(function (e) {
         e.preventDefault();
@@ -149,4 +149,5 @@ $(function () {
         }
         $ehMutato.hide().text(szoveg).fadeIn(400);
     }
+
 });

@@ -7,7 +7,7 @@ body {
     margin: 0;
     display: block;
     overflow-y: hidden;
-    background-color: rgba(115, 73, 0, 0.5);
+    background-color: rgba(115, 73, 0, 0.4);
     color: rgba(115, 73, 0, 1);
 }
 #tarolo {
@@ -39,6 +39,16 @@ input:focus {
         border: 2px solid rgba(115, 73, 0, 1);
         outline: none;
 }
+#nincsKesz{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    align-content:center;
+}
+ul {
+    list-style: none;
+}
 #hozzaAd, .btnKezs, .btnTorol, .btnArchiv, select {
     width: 80px;
     height: auto;
@@ -55,6 +65,25 @@ select, option{
     width:50px;
     margin:5px;
 }
+.btnKezs {
+    color: rgba(33, 117, 14, 0.7);
+    border: 2px solid rgba(33, 117, 14, 0.5);
+    background-color:rgba(142, 239, 48, 0.5);
+}
+.btnTorol {
+    color: rgba(233, 24, 24, 0.7);
+    border: 2px solid rgba(233, 24, 24, 0.5);
+    background-color: rgba(217, 77, 77, 0.5);
+}
+.btnArchiv {
+    color: rgba(18, 76, 89, 1);
+    border: 2px solid rgba(18, 76, 89, 0.5);
+    background-color: rgba(132, 217, 251, 0.5);
+}
+button:hover {
+    transform: scale(1.10);
+    transition: 0.3s;
+}
 #elorehaladas, #nincsKesz, #kesz, #archiv {
     display: flex;
     flex-direction: column;
@@ -67,7 +96,4 @@ select, option{
     background-color: beige;
     border-radius: 10px;
     border: 2px solid rgba(115, 73, 0, 0.5);
-}
-ul{
-    list-style:none;
 }
