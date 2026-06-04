@@ -9,6 +9,9 @@ body {
     background-color: rgba(115, 73, 0, 0.4);
     color: rgba(115, 73, 0, 1);
 }
+html, body {
+    height: 100%;
+}
 #tarolo {
     margin: 0 auto;
     width: 95vw;
@@ -54,9 +57,9 @@ ul {
 }
 li {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
-    gap:5px;
+    gap: 5px;
     padding: 5px;
     margin: 5px 0;
     background: rgba(255,255,255,0.4);
