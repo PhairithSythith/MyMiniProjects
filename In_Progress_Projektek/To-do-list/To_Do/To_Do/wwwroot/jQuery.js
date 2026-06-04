@@ -101,7 +101,7 @@ $(function () {
     function SelectFrissites() {
         var $select = $('#mikor');
         $select.empty();
-        var egyedi = ["Válassz dátumot"];
+        var egyedi = [];
         for (let i = 0; i < adatArchiv.length; i++) {
             if (egyedi.indexOf(adatArchiv[i].date) === -1) {
                 egyedi.push(adatArchiv[i].date);
@@ -123,9 +123,10 @@ $(function () {
             if (adatArchiv[i].date === valasztottDatum) {
                 var $li = $('<li></li>').text(
                     adatArchiv[i].f + " (" + adatArchiv[i].date + ") 😴"
-                );
+                )};
                 $archLista.append($li);
-            }}};
+            }
+        };
 
     $('#mikor').on('change', function () {
         Archivalas($(this).val());
