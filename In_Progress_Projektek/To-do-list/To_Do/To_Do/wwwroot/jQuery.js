@@ -61,8 +61,10 @@ $(function() {
             const item = adatTarolo.find(function (x) {
                 return x.id === id;
             });
-            item.done = true;
+        item.done = true;
+        $(this).parent().slideUp(200, function () {
             Render();
+        });
     });
     $(document).on('click', ".btnTorol", function () {
         const id = $(this).data("id");
@@ -70,7 +72,9 @@ $(function() {
             return x.id === id;
         });
         adatTarolo.splice(adatTarolo.indexOf(item), 1);
-        Render();
+        $(this).parent().slideUp(200, function () {
+            Render();
+        });
     });
 
     $(document).on('click', ".btnArchiv", function () {
