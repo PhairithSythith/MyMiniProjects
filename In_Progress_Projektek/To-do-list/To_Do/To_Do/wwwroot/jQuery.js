@@ -56,8 +56,8 @@ $(function() {
                 $ktarol.append($kli).append($btnArchiv);
                 $kesz.append($ktarol);
             }
-            Haladas();
         }
+        Haladas();
     };
     $(document).on('click', ".btnKezs", function () {
             const id = $(this).data("id");
@@ -114,7 +114,7 @@ $(function() {
         $archLista.empty();
         for (let i = 0; i < adatArchiv.length; i++) {
             if (adatArchiv[i].date === valasztottDatum) {
-                var $li = $('<li></li>').text(adatArchiv[i].f + " (" + adatArchiv[i].date + ")");
+                var $li = $('<li></li>').text(adatArchiv[i].f + " (" + adatArchiv[i].date + ") 😴");
                 $archLista.append($li);
             }
         }
@@ -125,21 +125,20 @@ $(function() {
     });
 
     function Haladas() {
-        var vanBefejezetlen = false;
-
+        if (adatTarolo.length === 0) {
+            $ehMutato.text('');
+            return;
+        }
+        var szoveg = '';
         for (let i = 0; i < adatTarolo.length; i++) {
-            if (adatTarolo[i].done == false) {
-                vanBefejezetlen = true;
-                break;
+            if (adatTarolo[i].done == true) {
+                szoveg += '😀';
+            }
+            else {
+                szoveg += '🥺';
             }
         }
-
-        if (vanBefejezetlen) {
-            $ehMutato.text('🥺');
-        }
-        else {
-            $ehMutato.text('😀');
-        }
+        $ehMutato.text(szoveg);
     }
 
 });
