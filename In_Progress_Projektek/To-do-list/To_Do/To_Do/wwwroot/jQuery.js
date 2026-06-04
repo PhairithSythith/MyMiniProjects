@@ -31,7 +31,6 @@ $(function() {
         $kesz.empty();
         for (let i = 0; i < adatTarolo.length; i++) {
             if (adatTarolo[i].done == false) {
-                ndb++;
                 var item = adatTarolo[i];
                 let feladat = adatTarolo[i].f;
                 let kulcsDate = adatTarolo[i].date;
@@ -46,7 +45,6 @@ $(function() {
                 $nincsKesz.append($ntarol);
             }
             else {
-                kdb++; ndb--;
                 var item = adatTarolo[i];
                 let feladat = adatTarolo[i].f;
                 let kulcsDate = adatTarolo[i].date;
@@ -124,6 +122,14 @@ $(function() {
     $('#mikor').on('change', function () {
         Archivalas($(this).val());
     });
+
+    function Haladas() {
+        for (let i = 0; i < adatTarolo.length; i++) {
+            if (adatTarolo[i].done == true) {
+                $ehMutato.text('😀');
+            }
+        }
+    }
 
 });
 
