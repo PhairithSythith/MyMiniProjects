@@ -41,7 +41,7 @@ $(function() {
                 $ntarol.append($nli).append($btnKezs).append($btnTorol);
                 $ntarol.hide();
                 $nincsKesz.append($ntarol);
-                $ntarol.slideDown(100);
+                $ntarol.slideDown(300);
             }
             else {
                 var item = adatTarolo[i];
@@ -54,7 +54,7 @@ $(function() {
                 $ktarol.append($kli).append($btnArchiv);
                 $ktarol.hide();
                 $kesz.append($ktarol);
-                $ktarol.slideDown(100);
+                $ktarol.slideDown(300);
             }
         }
         Haladas();
@@ -64,7 +64,7 @@ $(function() {
             const item = adatTarolo.find(function (x) {
                 return x.id === id;
             });
-        $(this).parent().slideUp(100, function () {
+        $(this).parent().slideUp(300, function () {
             item.done = true;
             Render();
         });
@@ -75,7 +75,7 @@ $(function() {
             return x.id === id;
         });
         adatTarolo.splice(adatTarolo.indexOf(item), 1);
-        $(this).parent().slideUp(100, function () {
+        $(this).parent().slideUp(300, function () {
             Render();
         });
     });
@@ -92,7 +92,7 @@ $(function() {
         if (selected !== null) {
             Archivalas(selected);
         }
-        $(this).parent().slideUp(100, function () {
+        $(this).parent().slideUp(300, function () {
             Render();
         });
     });
@@ -112,7 +112,7 @@ $(function() {
             $option.text(egyedi[i]);
             $select.append($option);
         }
-        $ahDoboz.slideDown(100);
+        $ahDoboz.slideDown(300);
     }
 
     function Archivalas(valasztottDatum) {
@@ -144,7 +144,7 @@ $(function() {
                 szoveg += '🥺';
             }
         }
-        $ehMutato.hide().text(szoveg).fadeIn(100);
+        $ehMutato.hide().text(szoveg).fadeIn(300);
     }
 
 });
