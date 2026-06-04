@@ -125,9 +125,11 @@ $(function() {
 
     function Haladas() {
         for (let i = 0; i < adatTarolo.length; i++) {
-            if (adatTarolo[i].done == true) {
-                $ehMutato.text('😀');
+            if (adatTarolo[i].done == false) {
+                $ehMutato = '🥺';
             }
+
+            $ehMutato += '😀';
         }
     }
 
