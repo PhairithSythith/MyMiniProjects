@@ -109,7 +109,7 @@ $(function () {
             }
         }
         for (let i = 0; i < egyedi.length; i++) {
-            var $option = $("<option></option>");
+            var $option = $("<option></option>").addClass('opt');
             $option.val(egyedi[i]);
             $option.text(egyedi[i]);
             $select.append($option);
