@@ -105,8 +105,10 @@ $(function () {
         for (let i = 0; i < adatArchiv.length; i++) {
             if (egyedi.indexOf(adatArchiv[i].date) === -1) {
                 egyedi.push(adatArchiv[i].date);
-            }
-        }
+            };
+            var opt1 = $('#opt1');
+            egyedi.push(opt1);
+        };
         for (let i = 0; i < egyedi.length; i++) {
             var $option = $("<option></option>").addClass('opt');
             $option.val(egyedi[i]);
