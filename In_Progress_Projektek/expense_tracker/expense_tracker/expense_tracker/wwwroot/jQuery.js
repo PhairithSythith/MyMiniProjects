@@ -6,19 +6,22 @@ $(function () {
 
     $koltsegForm.submit(function (e) {
         e.preventDefault();
-        let $koltsegInput = $('#koltsegInput');
-        let $dropDown = $('#dropDown');
-        let $osszegInput = $('#osszgInput');
+        let $koltsegInput = $('#koltsegInput').val().trim();
+        let $dropDown = $('#dropDown').val().trim();
+        let $osszegInput = $('#osszgInput').val().trim();
         if ($koltsegInput !== '' && $koltsegInput !== null && $dropDown !== '' && $dropDown !== null && $osszegInput !== '' && $osszegInput !== null) {
             const now = new Date();
             const month = now.getMonth() + 1;
             const year = now.getFullYear();
-            const kulcsDate = year + "-" + month;
-            adatTarolo.push({ id: Date.now(), f: feladat, date: kulcsDate, done: false });
-            Render();
+            const kulcsDate = year + "." + month;
+            adatTarolo.push({ id: Date.now(), dolog: $koltsegInput, mi:$dropDown, mennyi: $osszegInput, mikor: kulcsDate});
+            Epites();
             Mentes();
             $koltsegInput.val('');
+            $dropDown.val('');
+            $osszegInput.val('');
         }
+        else return;
     });
    
 });
