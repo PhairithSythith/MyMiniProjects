@@ -3,8 +3,8 @@ $(function () {
     const $ujFeladat = $('#feladatPlusz');
     var $nincsKesz = $('#nkLista');
     var $kesz = $('#kLista');
-    const adatTarolo = [];
-    const adatArchiv = [];
+    let adatTarolo = [];
+    let adatArchiv = [];
     var $ahDoboz = $('#ahDoboz').hide();
     $('#archLista').hide();
     var $ehMutato = $('#ehMutato').hide();
