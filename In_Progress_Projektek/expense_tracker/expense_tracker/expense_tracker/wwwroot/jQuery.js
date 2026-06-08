@@ -27,5 +27,12 @@ $(function () {
 
     function Epites() {
         $nTarolo.empty();
+        for (let i = adatTarolo.length; i >= 0; i--) {
+            var egyAdat = adatTarolo[i];
+            var vett = adatTarolo[i].dolog;
+            var beKi = adatTarolo[i].mi;
+            var mennyi = adatTarolo[i].mennyi;
+            var mikor = adatTarolo[i].mikor;
+        }
     };
 });
