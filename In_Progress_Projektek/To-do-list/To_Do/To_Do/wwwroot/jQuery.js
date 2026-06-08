@@ -1,4 +1,6 @@
 $(function () {
+    Betolt();
+
     const $ujFeladat = $('#feladatPlusz');
     var $nincsKesz = $('#nkLista');
     var $kesz = $('#kLista');
@@ -23,6 +25,7 @@ $(function () {
             const kulcsDate = year + "-" + month;
             adatTarolo.push({ id: Date.now(), f: feladat, date: kulcsDate, done: false });
             Render();
+            Mentes();
             $input.val('');
         }
         else return;
@@ -91,6 +94,7 @@ $(function () {
         $(this).parent().fadeOut(400, function () {
             item.done = true;
             Render();
+            Mentes();
         });
     });
 
@@ -102,6 +106,7 @@ $(function () {
         adatTarolo.splice(adatTarolo.indexOf(item), 1);
         $(this).parent().fadeOut(400, function () {
             Render();
+            Mentes();
         });
     });
 
@@ -119,6 +124,7 @@ $(function () {
         }
         $(this).parent().fadeOut(200, function () {
             Render();
+            Mentes();
         });
     });
 
@@ -190,11 +196,12 @@ $(function () {
     function Betolt() {
         const mentettTarolo = localStorage.getItem('adatTarolo');
         const mentettArchiv = localStorage.getItem('adatArchiv');
-
         if (mentettTarolo) {
+            adatTarolo.length = 0;
             adatTarolo.push(...JSON.parse(mentettTarolo));
         }
         if (mentettArchiv) {
+            adatArchiv.length = 0;
             adatArchiv.push(...JSON.parse(mentettArchiv));
         }
         Render();
