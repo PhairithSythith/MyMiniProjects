@@ -7,6 +7,10 @@ $(function () {
     var $ahDoboz = $('#ahDoboz').hide();
     $('#archLista').hide();
     var $ehMutato = $('#ehMutato').hide();
+    var $ehSzoveg = $('#ehSzoveg').hide();
+    var $nkSzoveg = $('#nkSzoveg').hide();
+    var $kSzoveg = $('#kSzoveg').hide();
+    var $ahSzoveg = $('#ahSzoveg').hide();
     
     $ujFeladat.submit(function (e) {
         e.preventDefault();
@@ -41,6 +45,7 @@ $(function () {
                 $ntarol.append($nli).append($btnKezs).append($btnTorol);
                 $ntarol.hide();
                 $nincsKesz.append($ntarol);
+                $nkSzoveg.fadeIn(400);
                 $ntarol.fadeIn(400);
             }
             else {
@@ -54,6 +59,7 @@ $(function () {
                 $ktarol.append($kli).append($btnArchiv);
                 $ktarol.hide();
                 $kesz.append($ktarol);
+                $kSzoveg.fadeIn(400);
                 $ktarol.fadeIn(400);
             }
         }
@@ -156,6 +162,7 @@ $(function () {
             else { szoveg += '🥺'; }
         }
         $ehMutato.hide().text(szoveg).fadeIn(400);
+        $ehSzoveg.hide().fadeIn(400);
     }
 
 });
