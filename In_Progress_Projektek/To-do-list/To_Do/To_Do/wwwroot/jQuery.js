@@ -204,7 +204,5 @@ $(function () {
             adatArchiv.length = 0;
             adatArchiv.push(...JSON.parse(mentettArchiv));
         }
-        Render();
-        SelectFrissites();
     }
 });
