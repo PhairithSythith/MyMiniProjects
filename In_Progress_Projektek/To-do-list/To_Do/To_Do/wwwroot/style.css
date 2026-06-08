@@ -102,6 +102,10 @@ button:hover {
     transform: scale(1.10);
     transition: 0.3s;
 }
+#nincsKesz, #kesz{
+    width:100px;
+    height:100px;
+}
 #feladatokKnK {
     display: flex;
     flex-direction: row;
