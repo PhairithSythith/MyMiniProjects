@@ -117,7 +117,7 @@ $(function () {
     };
 
     function Archivalas(valasztottDatum) {
-        var $archLista = $("#archLista");
+        var $archLista = $("#archLista").hide();
         $archLista.empty();
         for (let i = 0; i < adatArchiv.length; i++) {
             if (adatArchiv[i].date === valasztottDatum) {
@@ -131,10 +131,13 @@ $(function () {
 
     $(document).on('click', '.dLi', function () {
         const datum = $(this).text();
-        if (aktualisDatum === datum) {
-            $('#archLista').slideToggle(200);
+
+        if (aktualisDatum === datum && $('#archLista').is(':visible')) {
+            $('#archLista').slideUp(200);
+            aktualisDatum = null;
             return;
         }
+
         aktualisDatum = datum;
         Archivalas(datum);
         $('#archLista').hide().slideDown(200);
