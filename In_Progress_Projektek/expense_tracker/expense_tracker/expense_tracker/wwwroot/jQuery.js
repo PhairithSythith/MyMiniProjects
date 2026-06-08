@@ -1,8 +1,10 @@
 $(function () {
 
-    let $aktEgyenleg = $('#aktEgyenleg').text(0);
+    let $aktEgyenleg = $('#aktEgyenleg');
     let $koltsegForm = $('#koltsegForm');
     let $nTarolo = $('#nTarolo');
+    let kiadas = $('#kiadas');
+    let bevetel = $('#bevetel');
     let adatTarolo = [];
 
     Betoltes();
@@ -16,7 +18,7 @@ $(function () {
         let dolog = $koltsegInput.val().trim();
         let tipus = $dropDown.val().trim();
         let osszeg = $osszegInput.val().trim();
-        if (dolog === '' || tipus === '' || osszeg === '') {
+        if (dolog === '' || tipus === '' || osszeg === '' || isNaN(osszeg) ) {
             return;
         }
         let osszegSzam = parseInt(osszeg);
@@ -47,13 +49,21 @@ $(function () {
             $kkTarolo.addClass('kkTarolo');
             $nkTarolo.addClass('nkTarolo').hide();
             $kTarolo.append(`Költség típusa: <span style="color:${bekiSzin(beKi)}">${beKi}</span>,  Megnevezés: ${vett},`);
-            $kkTarolo.append(` Összeg: ${mennyi}, Időpont: ${mikor}`);
+            $kkTarolo.append(`Összeg: ${mennyi}, Időpont: ${mikor}`);
             $nkTarolo.append($kTarolo, $kkTarolo, $btnTorol);
-            $nTarolo.append($nkTarolo);
+            if (adatTarolo[i].mi === "Kiadás") {
+                kiadas.append($nkTarolo);
+                $nTarolo.append(kiadas)
+            }
+            else if (adatTarolo[i].mi === "Bevétel") {
+                bevetel.append($nkTarolo);
+                $nTarolo.append(bevetel)
+            }
             $nkTarolo.fadeIn(400);
         }
     };
 
+            
     $(document).on('click', '.btnTorol', function () {
         let id = $(this).data('id');
         let item = adatTarolo.find(function (x) {
@@ -70,13 +80,16 @@ $(function () {
         for (let i = 0; i <adatTarolo.length; i++) {
             if (adatTarolo[i].mi === "Kiadás") {
                 pez -= adatTarolo[i].mennyi;
+                $aktEgyenleg.text(pez);
             }
             else if (adatTarolo[i].mi === "Bevétel") {
                 pez += adatTarolo[i].mennyi;
+                $aktEgyenleg.text(pez);
             }
-            else return;
+            else if (adatTarolo.length === 0) {
+                $aktEgyenleg.text("Nincs még költség rögzítve");
+            }
         }
-        $aktEgyenleg.text(pez);
         if (pez >= 0) {
             $aktEgyenleg.css("color", "green");
         } else {
