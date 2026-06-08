@@ -2,6 +2,7 @@ $(function () {
 
     let $aktEgyenleg = $('#aktEgyenleg');
     let $koltsegForm = $('#koltsegForm');
+    let $nTarolo = $('#nTarolo');
     let adatTarolo = [];
 
     $koltsegForm.submit(function (e) {
@@ -25,6 +26,6 @@ $(function () {
     });
 
     function Epites() {
-
+        $nTarolo.empty();
     };
 });
