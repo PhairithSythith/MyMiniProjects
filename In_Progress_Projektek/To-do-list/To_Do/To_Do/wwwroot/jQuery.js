@@ -2,7 +2,7 @@ $(function () {
     const $ujFeladat = $('#feladatPlusz');
     var $nincsKesz = $('#nkLista');
     var $kesz = $('#kLista');
-    const adatTarolo = [];
+    const adatTarolo = [f:falmaszas, date:2025.03, done:true];
     const adatArchiv = [];
     var $ahDoboz = $('#ahDoboz').hide();
     var $ehMutato = $('#ehMutato').hide();
