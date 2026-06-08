@@ -86,6 +86,7 @@ $(function () {
         $(this).parent().fadeOut(400, function () {
             Render();
         });
+        $nkSzoveg.fadeOut(400);
     });
 
     $(document).on('click', ".btnArchiv", function () {
