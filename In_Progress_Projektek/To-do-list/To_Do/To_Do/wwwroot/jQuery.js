@@ -35,7 +35,7 @@ $(function () {
     function Render() {
         $nincsKesz.empty();
         $kesz.empty();
-        for (let i = 0; i < adatTarolo.length; i++) {
+        for (let i = adatTarolo.length - 1; i >= 0; i--) {
             if (adatTarolo[i].done == false) {
                 var item = adatTarolo[i];
                 let feladat = adatTarolo[i].f;
