@@ -187,7 +187,17 @@ $(function () {
         localStorage.setItem('adatArchiv', JSON.stringify(adatArchiv));
     };
 
-    const mentettTarolo = localStorage.getItem('adatTarolo');
-    const mentettArchiv = localStorage.getItem('adatArchiv');
+    function Betolt() {
+        const mentettTarolo = localStorage.getItem('adatTarolo');
+        const mentettArchiv = localStorage.getItem('adatArchiv');
 
+        if (mentettTarolo) {
+            adatTarolo.push(...JSON.parse(mentettTarolo));
+        }
+        if (mentettArchiv) {
+            adatArchiv.push(...JSON.parse(mentettArchiv));
+        }
+        Render();
+        SelectFrissites();
+    }
 });
