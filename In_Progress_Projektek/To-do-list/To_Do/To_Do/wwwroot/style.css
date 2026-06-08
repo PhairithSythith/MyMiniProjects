@@ -109,7 +109,7 @@ button:hover {
     align-content: center;
     align-items: center;
 }
-#ehMutato {
+#ehMutato, h1 {
     padding:5px;
     background-color: beige;
     border-radius: 10px;

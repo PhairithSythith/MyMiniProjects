@@ -63,6 +63,23 @@ $(function () {
                 $ktarol.fadeIn(400);
             }
         }
+        if ($nincsKesz.children().length === 0) {
+            $nkSzoveg.hide();
+        } else {
+            $nkSzoveg.show();
+        }
+
+        if ($kesz.children().length === 0) {
+            $kSzoveg.hide();
+        } else {
+            $kSzoveg.show();
+        }
+
+        if (adatArchiv.length === 0) {
+            $ahSzoveg.hide();
+        } else {
+            $ahSzoveg.show();
+        }
         Haladas();
     };
 
@@ -75,7 +92,6 @@ $(function () {
             item.done = true;
             Render();
         });
-        $nkSzoveg.fadeOut(400);
     });
 
     $(document).on('click', ".btnTorol", function () {
@@ -87,7 +103,6 @@ $(function () {
         $(this).parent().fadeOut(400, function () {
             Render();
         });
-        $nkSzoveg.fadeOut(400);
     });
 
     $(document).on('click', ".btnArchiv", function () {
@@ -104,10 +119,6 @@ $(function () {
         }
         $(this).parent().fadeOut(200, function () {
             Render();
-        });
-        $kSzoveg.fadeOut(400, function () {
-            $ahSzoveg.hide();
-            $ahSzoveg.fadeIn(400);
         });
     });
 
