@@ -1,6 +1,6 @@
 $(function () {
 
-    let $aktEgyenleg = $('#aktEgyenleg');
+    let $aktEgyenleg = $('#aktEgyenleg').text(0);
     let $koltsegForm = $('#koltsegForm');
     let $nTarolo = $('#nTarolo');
     let adatTarolo = [];
@@ -11,7 +11,7 @@ $(function () {
     $koltsegForm.submit(function (e) {
         e.preventDefault();
         let $koltsegInput = $('#koltsegInput');
-        let $dropDown = $('#dropDown');
+        let $dropDown = $('#KiBeVmi');
         let $osszegInput = $('#osszegInput');
         let dolog = $koltsegInput.val().trim();
         let tipus = $dropDown.val().trim();
@@ -27,7 +27,6 @@ $(function () {
         AktualPenz();
         Menetes();
         $koltsegInput.val('');
-        $dropDown.val('');
         $osszegInput.val('');
     });
 
@@ -42,10 +41,16 @@ $(function () {
             var $btnTorol = $('<button type="button" class="btnTorol">Törlés</button>');
             $btnTorol.data("id", egyAdat.id);
             let $kTarolo = $('<div></div>');
+            let $kkTarolo = $('<div></div>');
+            let $nkTarolo = $('<div></div>');
             $kTarolo.addClass('kTarolo');
-            $kTarolo.append(`Költség típusa: <span style="color:${bekiSzin(beKi)}">${beKi}</span>, Megnevezés: ${vett}, Összeg: ${mennyi}, Időpont: ${mikor}`, $btnTorol).hide();
-            $nTarolo.append($kTarolo);
-            $kTarolo.fadeIn(400);
+            $kkTarolo.addClass('kkTarolo');
+            $nkTarolo.addClass('nkTarolo').hide();
+            $kTarolo.append(`Költség típusa: <span style="color:${bekiSzin(beKi)}">${beKi}</span>,  Megnevezés: ${vett},`);
+            $kkTarolo.append(` Összeg: ${mennyi}, Időpont: ${mikor}`);
+            $nkTarolo.append($kTarolo, $kkTarolo, $btnTorol);
+            $nTarolo.append($nkTarolo);
+            $nkTarolo.fadeIn(400);
         }
     };
 
@@ -63,13 +68,13 @@ $(function () {
     function AktualPenz() {
         let pez = 0;
         for (let i = 0; i <adatTarolo.length; i++) {
-            if (adatTarolo[i].mi === "Kiadás" || adatTarolo[i].mi === "Kiadas") {
+            if (adatTarolo[i].mi === "Kiadás") {
                 pez -= adatTarolo[i].mennyi;
             }
-            else if (adatTarolo[i].mi === "Bevétel" || adatTarolo[i].mi === "Bevetel") {
+            else if (adatTarolo[i].mi === "Bevétel") {
                 pez += adatTarolo[i].mennyi;
             }
-            else continue;
+            else return;
         }
         $aktEgyenleg.text(pez);
         if (pez >= 0) {
@@ -80,9 +85,9 @@ $(function () {
     }
 
     function bekiSzin(ertek) {
-        if (ertek === "Kiadás" || ertek === "Kiadas") {
+        if (ertek === "Kiadás") {
             return "red";
-        } else if (ertek === "Bevétel" || ertek === "Bevetel") {
+        } else if (ertek === "Bevétel") {
             return "green";
         }
         else return "black";
