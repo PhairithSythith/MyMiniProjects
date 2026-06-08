@@ -91,7 +91,7 @@ $(function () {
         adatTarolo.splice(index, 1);
         SelectFrissites();
         var selected = $("#mikor").val();
-        if (selected !== null) {
+        if (selected !== '') {
             Archivalas(selected);
         }
         $(this).parent().fadeOut(200, function () {
@@ -102,7 +102,7 @@ $(function () {
     function SelectFrissites() {
         var $select = $('#mikor');
         $select.empty();
-        $select.append('<option value="">Válassz dátumot</option>').addClass('opt');
+        $select.append($('<option></option>').val('').text('Válassz dátumot').addClass('opt'));
         var egyedi = [];
         for (let i = 0; i < adatArchiv.length; i++) {
             if (egyedi.indexOf(adatArchiv[i].date) === -1) {
@@ -131,7 +131,7 @@ $(function () {
             }
         };
 
-    $('#mikor').on('click', function () {
+    $('#mikor').on('change', function () {
         const datum = $(this).val();
         if (datum === '') {
             $('#archLista').slideUp(200);
