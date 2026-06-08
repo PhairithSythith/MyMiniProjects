@@ -1,5 +1,4 @@
 $(function () {
-    Betolt();
 
     const $ujFeladat = $('#feladatPlusz');
     var $nincsKesz = $('#nkLista');
@@ -13,6 +12,8 @@ $(function () {
     var $nkSzoveg = $('#nkSzoveg').hide();
     var $kSzoveg = $('#kSzoveg').hide();
     var $ahSzoveg = $('#ahSzoveg').hide();
+
+    Betolt();
     
     $ujFeladat.submit(function (e) {
         e.preventDefault();
@@ -204,5 +205,7 @@ $(function () {
             adatArchiv.length = 0;
             adatArchiv.push(...JSON.parse(mentettArchiv));
         }
+        Render();
+        SelectFrissites();
     }
 });
