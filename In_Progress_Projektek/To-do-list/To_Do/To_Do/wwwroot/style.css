@@ -103,8 +103,8 @@ button:hover {
     transition: 0.3s;
 }
 #nincsKesz, #kesz{
-    width:100px;
-    height:100px;
+    min-width:10vh;
+    min-height:30vh;
 }
 #feladatokKnK {
     display: flex;
