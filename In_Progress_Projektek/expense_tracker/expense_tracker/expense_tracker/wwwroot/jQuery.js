@@ -67,4 +67,12 @@ $(function () {
         }
         $aktEgyenleg.text(pez);
     }
+
+    function bekiSzin(ertek) {
+        if (ertek === "Kiadás" || ertek === "Kiadas") {
+            return ertek.style.color = "red";
+        } else {
+            return ertek.style.color = "green";
+        }
+    }
 });
