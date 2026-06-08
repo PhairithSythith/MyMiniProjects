@@ -75,6 +75,7 @@ $(function () {
             item.done = true;
             Render();
         });
+        $nkSzoveg.fadeOut(400);
     });
 
     $(document).on('click', ".btnTorol", function () {
@@ -103,6 +104,10 @@ $(function () {
         }
         $(this).parent().fadeOut(200, function () {
             Render();
+        });
+        $kSzoveg.fadeOut(400, function () {
+            $ahSzoveg.hide();
+            $ahSzoveg.fadeIn(400);
         });
     });
 
