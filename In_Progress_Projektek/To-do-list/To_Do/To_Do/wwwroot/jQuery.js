@@ -2,10 +2,11 @@ $(function () {
     const $ujFeladat = $('#feladatPlusz');
     var $nincsKesz = $('#nkLista');
     var $kesz = $('#kLista');
-    const adatTarolo = [f:falmaszas, date:2025.03, done:true];
+    const adatTarolo = [];
     const adatArchiv = [];
     var $ahDoboz = $('#ahDoboz').hide();
     var $ehMutato = $('#ehMutato').hide();
+    let aktualisDatum = null;
 
     $ujFeladat.submit(function (e) {
         e.preventDefault();
@@ -99,8 +100,8 @@ $(function () {
     });
 
     function SelectFrissites() {
-        var $select = $('#mikor');
-        $select.empty();
+        var $mUl = $('#mikor');
+        $mUl.empty();
         var egyedi = [];
         for (let i = 0; i < adatArchiv.length; i++) {
             if (egyedi.indexOf(adatArchiv[i].date) === -1) {
@@ -108,10 +109,9 @@ $(function () {
             };
         };
         for (let i = 0; i < egyedi.length; i++) {
-            var $option = $("<option></option>").addClass('opt');
-            $option.val(egyedi[i]);
-            $option.text(egyedi[i]);
-            $select.append($option);
+            var $dLi = $("<li></li>").addClass('dLi');
+            $dLi.text(egyedi[i]);
+            $mUl.append($dLi);
         };
         $ahDoboz.slideDown(200);
     };
@@ -122,14 +122,22 @@ $(function () {
         for (let i = 0; i < adatArchiv.length; i++) {
             if (adatArchiv[i].date === valasztottDatum) {
                 var $li = $('<li></li>').text(
-                    adatArchiv[i].f + " (" + adatArchiv[i].date + ") 😴"
-                )};
+                    adatArchiv[i].f + " (" + adatArchiv[i].date + ") 😴");
+
                 $archLista.append($li);
+                };
             }
         };
 
-    $('#mikor').on('change', function () {
-        Archivalas($(this).val());
+    $(document).on('click', '.dLi', function () {
+        const datum = $(this).text();
+        if (aktualisDatum === datum) {
+            $('#archLista').slideToggle(200);
+            return;
+        }
+        aktualisDatum = datum;
+        Archivalas(datum);
+        $('#archLista').hide().slideDown(200);
     });
 
     function Haladas() {
