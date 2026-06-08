@@ -9,7 +9,7 @@ $(function () {
         e.preventDefault();
         let $koltsegInput = $('#koltsegInput');
         let $dropDown = $('#dropDown');
-        let $osszegInput = $('#osszgInput');
+        let $osszegInput = $('#osszegInput');
         let dolog = $koltsegInput.val().trim();
         let tipus = $dropDown.val().trim();
         let osszeg = $osszegInput.val().trim();
