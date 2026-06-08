@@ -18,21 +18,27 @@ $(function () {
             adatTarolo.push({ id: Date.now(), dolog: $koltsegInput, mi:$dropDown, mennyi: $osszegInput, mikor: kulcsDate});
             Epites();
             Mentes();
-            $koltsegInput.val('');
-            $dropDown.val('');
-            $osszegInput.val('');
+            $koltsegInput.text('');
+            $dropDown.text('');
+            $osszegInput.text('');
         }
         else return;
     });
 
     function Epites() {
         $nTarolo.empty();
-        for (let i = adatTarolo.length; i >= 0; i--) {
+        for (let i = adatTarolo.length-1; i >= 0; i--) {
             var egyAdat = adatTarolo[i];
             var vett = adatTarolo[i].dolog;
             var beKi = adatTarolo[i].mi;
             var mennyi = adatTarolo[i].mennyi;
             var mikor = adatTarolo[i].mikor;
+            var $btnTorol = $('<button type="button" class="btnTorol">Törlés</button>');
+            $btnTorol.data("id", egyAdat.id);
+            let $kTarolo = $('<div></div>');
+            $kTarolo.addClass('kTarolo');
+            $kTarolo.append(`Költség típusa: ${beKi}, Megnevezés: ${vett}, Összeg: ${mennyi}, Időpont: ${mikor}`, $btnTorol);
+            $nTarolo.append($kTarolo);
         }
     };
 });
