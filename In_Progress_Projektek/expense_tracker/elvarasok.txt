@@ -1,0 +1,130 @@
+💼 Projekt: “Költségkövető – személyes pénzügyi napló”
+🎯 Amit akarok
+
+Egy egyszerű, de használható webappot, amiben tudom követni a pénzem mozgását.
+
+📌 Kötelező funkciók
+1. 💸 Tranzakció felvitel
+megnevezés (pl. “bolt”, “fizetés”, “bérlet”)
+összeg
+típus:
+bevétel
+kiadás
+egy gomb: “Hozzáadás”
+2. 📋 Lista nézet
+minden tétel látszódjon
+legyen:
+megnevezés
+összeg (+ vagy - jelöléssel)
+törlés gomb
+3. 💰 Egyenleg kijelzés
+folyamatosan mutassa:
+összes bevétel
+összes kiadás
+aktuális egyenleg
+⚙️ Elvárás a működésre
+minden adat egy központi listában legyen kezelve
+ha bármi változik → az egész UI frissüljön
+ne legyen “fél frissítés”, minden legyen konzisztens
+🧠 Fontos (megrendelői kitétel 😄)
+
+Nem érdekel a design első körben.
+
+👉 Előbb működjön tökéletesen
+👉 aztán lehet csinosítani
+
+🚀 Extra (ha jól haladunk)
+
+Ha alap kész, akkor szeretném:
+
+mentés böngészőbe (ne tűnjön el frissítéskor)
+kategóriák (kajá, rezsi, stb.)
+havi szűrés
+“statisztika mód” (összesítés külön nézetben)
+
+
+
+🎨 Költségkövető app – kinézet (elvárás)
+🧱 Alap layout
+
+Az egész legyen egy középre igazított kártya, nem széthúzva.
+
+háttér: világos, enyhén szürke
+app doboz: fehér kártya
+lekerekített sarkok
+enyhe árnyék (modern “card” feeling)
+
+👉 cél: “mobil app jellegű” kinézet böngészőben
+
+🟣 Fejléc
+
+Legfelül:
+
+cím: Költségkövető
+alatta nagy szám:
+💰 aktuális egyenleg
+az egyenleg legyen:
+zöld ha pozitív
+piros ha negatív
+
+👉 ez legyen a “fókuszpont”
+
+🟡 Beviteli rész
+
+Egy blokkban:
+
+input: megnevezés
+input: összeg
+dropdown:
+bevétel / kiadás
+gomb:
+“Hozzáadás”
+
+📌 fontos:
+
+minden egy sorban vagy szép egymás alá rendezve
+ne legyen zsúfolt
+inputok legyenek “clean”, modern stílusúak
+🔵 Lista rész
+
+Ez alatta:
+
+Minden elem egy kártya / sor
+
+Egy elem így nézzen ki vizuálisan:
+
+bal oldalon: megnevezés
+mellette: összeg
+bevétel → zöld +
+kiadás → piros -
+jobb oldalon: ❌ törlés gomb
+
+📌 extra:
+
+hover effekt (picit emelkedik / halvány szín)
+sorok jól elkülönülnek
+🟢 Stílus irány
+modern, letisztult
+semmi “régi HTML feeling”
+sok fehér tér (whitespace)
+finom színek
+
+Színpaletta:
+
+háttér: #f4f6f8
+kártya: #ffffff
+zöld: bevétel
+piros: kiadás
+szöveg: sötétszürke
+✨ Extra UX (ha profin akarjuk)
+törlés gomb csak hoverre erősödik
+gomb: enyhén kék vagy zöld
+input focus: finom glow
+lista animáció (új elem “beúszik”)
+🧠 Megrendelői gondolkodás (fontos)
+
+Azt akarom, hogy:
+
+👉 ránézek és “appnak érződjön”, ne webformnak
+👉 az egyenleg legyen a “dashboard feeling”
+👉 a lista legyen a “history feed”
