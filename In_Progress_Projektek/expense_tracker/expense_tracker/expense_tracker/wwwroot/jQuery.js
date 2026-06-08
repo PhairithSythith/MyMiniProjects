@@ -39,7 +39,7 @@ $(function () {
             $btnTorol.data("id", egyAdat.id);
             let $kTarolo = $('<div></div>');
             $kTarolo.addClass('kTarolo');
-            $kTarolo.append(`<spam style="color:${bekiSzin(beKi)}">Költség típusa: ${beKi}</span>, Megnevezés: ${vett}, Összeg: ${mennyi}, Időpont: ${mikor}`, $btnTorol);
+            $kTarolo.append(`<span style="color:${bekiSzin(beKi)}">Költség típusa: ${beKi}</span>, Megnevezés: ${vett}, Összeg: ${mennyi}, Időpont: ${mikor}`, $btnTorol);
             $nTarolo.append($kTarolo);
         }
     };
