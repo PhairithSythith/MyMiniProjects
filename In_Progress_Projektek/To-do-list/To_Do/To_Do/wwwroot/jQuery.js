@@ -197,14 +197,10 @@ $(function () {
     function Betolt() {
         const mentettTarolo = localStorage.getItem('adatTarolo');
         const mentettArchiv = localStorage.getItem('adatArchiv');
-        if (mentettTarolo) {
-            adatTarolo.length = 0;
-            adatTarolo.push(...JSON.parse(mentettTarolo));
-        }
-        if (mentettArchiv) {
-            adatArchiv.length = 0;
-            adatArchiv.push(...JSON.parse(mentettArchiv));
-        }
+
+        adatTarolo = mentettTarolo ? JSON.parse(mentettTarolo) : [];
+        adatArchiv = mentettArchiv ? JSON.parse(mentettArchiv) : [];
+
         Render();
         SelectFrissites();
     }
