@@ -7,11 +7,11 @@ $(function () {
     let adatArchiv = [];
     var $ahDoboz = $('#ahDoboz').hide();
     $('#archLista').hide();
-    var $ehMutato = $('#ehMutato').hide();
-    var $ehSzoveg = $('#ehSzoveg').hide();
-    var $nkSzoveg = $('#nkSzoveg').hide();
-    var $kSzoveg = $('#kSzoveg').hide();
-    var $ahSzoveg = $('#ahSzoveg').hide();
+    var $ehMutato = $('#ehMutato');
+    var $ehSzoveg = $('#ehSzoveg');
+    var $nkSzoveg = $('#nkSzoveg');
+    var $kSzoveg = $('#kSzoveg');
+    var $ahSzoveg = $('#ahSzoveg');
 
     Betolt();
     

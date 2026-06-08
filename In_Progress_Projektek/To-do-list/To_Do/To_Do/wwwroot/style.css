@@ -13,6 +13,12 @@ body {
     background-color: rgba(115, 73, 0, 0.4);
     color: rgba(115, 73, 0, 1);
 }
+#h1 {
+    padding: 5px;
+    background-color: beige;
+    border-radius: 10px;
+    border: 2px solid rgba(115, 73, 0, 0.5);
+}
 #tarolo {
     margin: 0 auto;
     width: 95vw;
@@ -103,8 +109,8 @@ button:hover {
     transition: 0.3s;
 }
 #nincsKesz, #kesz{
-    min-width:10vh;
-    flex:1;
+    min-width:20vh;
+    min-height:30vh;
 }
 #feladatokKnK {
     display: flex;
@@ -120,7 +126,7 @@ button:hover {
     align-content: center;
     align-items: center;
 }
-#ehMutato, h1 {
+#ehMutato{
     padding: 5px;
     background-color: beige;
     border-radius: 10px;
