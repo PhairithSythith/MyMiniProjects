@@ -182,4 +182,12 @@ $(function () {
         $ehSzoveg.hide().fadeIn(400);
     }
 
+    function Mentes() {
+        localStorage.setItem('adatTarolo', JSON.stringify(adatTarolo));
+        localStorage.setItem('adatArchiv', JSON.stringify(adatArchiv));
+    };
+
+    const mentettTarolo = localStorage.getItem('adatTarolo');
+    const mentettArchiv = localStorage.getItem('adatArchiv');
+
 });
