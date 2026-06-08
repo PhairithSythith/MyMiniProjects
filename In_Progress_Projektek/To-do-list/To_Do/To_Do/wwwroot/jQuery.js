@@ -5,9 +5,9 @@ $(function () {
     const adatTarolo = [];
     const adatArchiv = [];
     var $ahDoboz = $('#ahDoboz').hide();
+    $('#archLista').hide();
     var $ehMutato = $('#ehMutato').hide();
-    let aktualisDatum = null;
-
+    
     $ujFeladat.submit(function (e) {
         e.preventDefault();
         const $input = $('#feladat');
@@ -100,8 +100,9 @@ $(function () {
     });
 
     function SelectFrissites() {
-        var $mUl = $('#mikor');
-        $mUl.empty();
+        var $select = $('#mikor');
+        $select.empty();
+        $select.append('<option value="">Válassz dátumot</option>').addClass('opt');
         var egyedi = [];
         for (let i = 0; i < adatArchiv.length; i++) {
             if (egyedi.indexOf(adatArchiv[i].date) === -1) {
@@ -109,15 +110,16 @@ $(function () {
             };
         };
         for (let i = 0; i < egyedi.length; i++) {
-            var $dLi = $("<li></li>").addClass('dLi');
-            $dLi.text(egyedi[i]);
-            $mUl.append($dLi);
+            var $option = $("<option></option>").addClass('opt');
+            $option.val(egyedi[i]);
+            $option.text(egyedi[i]);
+            $select.append($option);
         };
         $ahDoboz.slideDown(200);
     };
 
     function Archivalas(valasztottDatum) {
-        var $archLista = $("#archLista").hide();
+        var $archLista = $("#archLista");
         $archLista.empty();
         for (let i = 0; i < adatArchiv.length; i++) {
             if (adatArchiv[i].date === valasztottDatum) {
@@ -129,16 +131,12 @@ $(function () {
             }
         };
 
-    $(document).on('click', '.dLi', function () {
-        const datum = $(this).text();
-
-        if (aktualisDatum === datum && $('#archLista').is(':visible')) {
+    $('#mikor').on('click', function () {
+        const datum = $(this).val();
+        if (datum === '') {
             $('#archLista').slideUp(200);
-            aktualisDatum = null;
             return;
         }
-
-        aktualisDatum = datum;
         Archivalas(datum);
         $('#archLista').hide().slideDown(200);
     });
