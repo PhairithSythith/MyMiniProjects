@@ -39,8 +39,10 @@ $(function () {
             $btnTorol.data("id", egyAdat.id);
             let $kTarolo = $('<div></div>');
             $kTarolo.addClass('kTarolo');
-            $kTarolo.append(`<span style="color:${bekiSzin(beKi)}">Költség típusa: ${beKi}</span>, Megnevezés: ${vett}, Összeg: ${mennyi}, Időpont: ${mikor}`, $btnTorol);
-            $nTarolo.append($kTarolo);
+            $kTarolo.append(`Költség típusa: <span style="color:${bekiSzin(beKi)}">${beKi}</span>, Megnevezés: ${vett}, Összeg: ${mennyi}, Időpont: ${mikor}`, $btnTorol).hide();
+            $nTarolo.append($kTarolo).hide();
+            $nTarolo.fadeIn(400);
+            $kTarolo.fadeIn(400);
         }
     };
 
@@ -59,11 +61,12 @@ $(function () {
         let pez = 0;
         for (let i = adatTarolo.length - 1; i >= 0; i--) {
             if (adatTarolo[i].mi === "Kiadás" || adatTarolo[i].mi === "Kiadas") {
-                pez-= adatTarolo[i].mennyi;
+                pez -= adatTarolo[i].mennyi;
             }
-            else {
+            else if (adatTarolo[i].mi === "Bevétel" || adatTarolo[i].mi === "Bevetel") {
                 pez += adatTarolo[i].mennyi;
             }
+            else return;
         }
         $aktEgyenleg.text(pez);
     }
@@ -71,8 +74,13 @@ $(function () {
     function bekiSzin(ertek) {
         if (ertek === "Kiadás" || ertek === "Kiadas") {
             return "red";
-        } else {
+        } else if (ertek === "Bevétel" || ertek === "Bevetel") {
             return "green";
         }
+        else return;
+    }
+
+    function Menetes() {
+        localStorage.setItem('adatTarolo', JSON.stringify(adatTarolo));
     }
 });
