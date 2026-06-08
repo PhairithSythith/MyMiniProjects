@@ -41,4 +41,13 @@ $(function () {
             $nTarolo.append($kTarolo);
         }
     };
+    $(document).on('click', '.btnTorol', function () {
+        let id = $(this).data('id');
+        let item = adatTarolo.find(function (x) {
+            return x.id === id;
+        }); adatTarolo.splice(adatTarolo.indexOf(item), 1);
+        $(this).parent().fadeOut(400, function () {
+            Epites();
+        });
+    });
 });
