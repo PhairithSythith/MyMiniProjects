@@ -2,7 +2,7 @@ $(function () {
 
     let $aktEgyenleg = $('#aktEgyenleg');
     let $koltsegForm = $('#koltsegForm');
-    let $nTarolo = $('#nTarolo');
+    let $nTarolo = $('#nTarolo').hide();
     let kiadas = $('#kiadas');
     let bevetel = $('#bevetel');
     let adatTarolo = [];
@@ -53,11 +53,13 @@ $(function () {
             $nkTarolo.append($kTarolo, $kkTarolo, $btnTorol);
             if (adatTarolo[i].mi === "Kiadás") {
                 kiadas.append($nkTarolo);
-                $nTarolo.append(kiadas)
+                $nTarolo.append(kiadas);
+                $nTarolo.fadeIn(300);
             }
             else if (adatTarolo[i].mi === "Bevétel") {
                 bevetel.append($nkTarolo);
-                $nTarolo.append(bevetel)
+                $nTarolo.append(bevetel);
+                $nTarolo.fadeIn(300);
             }
             $nkTarolo.fadeIn(400);
         }
