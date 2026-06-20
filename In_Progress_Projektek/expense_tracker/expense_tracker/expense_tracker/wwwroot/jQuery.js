@@ -115,5 +115,5 @@ $(function () {
         adatTarolo = mentettTarolo ? JSON.parse(mentettTarolo) : [];
         Epites();
         AktualPenz();
-    }
+    };
 });
