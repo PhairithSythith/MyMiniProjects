@@ -7,15 +7,6 @@ $(function () {
     let bevetel = $('#bevetel');
     let adatTarolo = [];
 
-    function vanKategoria(tipus) {
-        for (let i = 0; i < adatTarolo.length; i++) {
-            if (adatTarolo[i].mi === tipus) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     Betoltes();
     AktualPenz();
 
@@ -43,8 +34,6 @@ $(function () {
 
     function Epites() {
         $nTarolo.empty();
-        let vanKiadás = vanKategoria("Kiadás");
-        let vanBevétel = vanKategoria("Bevétel");
         for (let i = adatTarolo.length-1; i >= 0; i--) {
             var egyAdat = adatTarolo[i];
             var vett = adatTarolo[i].dolog;
@@ -64,24 +53,21 @@ $(function () {
             $nkTarolo.append($kTarolo, $kkTarolo, $btnTorol);
             if (adatTarolo[i].mi === "Kiadás") {
                 kiadas.append($nkTarolo);
+                $nTarolo.append(kiadas);
+                $nTarolo.fadeIn(300);
             }
             else if (adatTarolo[i].mi === "Bevétel") {
                 bevetel.append($nkTarolo);
+                $nTarolo.append(bevetel);
+                $nTarolo.fadeIn(300);
             }
             $nkTarolo.fadeIn(400);
-        };
-        if (vanKiadás) {
-            $nTarolo.append(kiadas);
-        }
-        if (vanBevétel) {
-            $nTarolo.append(bevetel);
         }
         if (adatTarolo.length === 0) {
-            $nTarolo.hide();
+            kiadas.empty();
+            bevetel.empty();
+            $nTarolo.empty().hide();
         }
-        else {
-            $nTarolo.fadeIn(300);
-        };
     };
 
             
