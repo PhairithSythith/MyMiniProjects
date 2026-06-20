@@ -70,19 +70,18 @@ $(function () {
             }
             $nkTarolo.fadeIn(400);
         };
-        if (kiadas.children().length > 1) {
+        if (vanKiadás) {
             $nTarolo.append(kiadas);
         }
-
-        if (bevetel.children().length > 1) {
+        if (vanBevétel) {
             $nTarolo.append(bevetel);
         }
-
         if (adatTarolo.length === 0) {
             $nTarolo.hide();
-        } else {
-            $nTarolo.fadeIn(300);
         }
+        else {
+            $nTarolo.fadeIn(300);
+        };
     };
 
             
