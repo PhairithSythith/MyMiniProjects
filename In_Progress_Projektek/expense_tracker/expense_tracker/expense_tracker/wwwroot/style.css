@@ -40,7 +40,28 @@ form {
     align-content: center;
     align-items: center;
     gap: 10px;
+    background-color: rgb(209, 197, 164);
+}
+fieldset {
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
     background-color:rgb(193, 182, 166);
+}
+legend {
+    padding: 5px;
+    border: 2px solid rgb(193, 182, 166);
+    border-radius: 15px;
+    background-color: rgb(77, 41, 4);
+    outline: none;
+    color: rgb(193, 182, 166);
 }
 input, button {
     padding: 5px;
