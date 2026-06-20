@@ -34,6 +34,8 @@ $(function () {
 
     function Epites() {
         $nTarolo.empty();
+        kiadas.empty().append('<div id="k">Kiadások</div>');
+        bevetel.empty().append('<div id="b">Bevételek</div>');
         for (let i = adatTarolo.length-1; i >= 0; i--) {
             var egyAdat = adatTarolo[i];
             var vett = adatTarolo[i].dolog;
@@ -53,20 +55,24 @@ $(function () {
             $nkTarolo.append($kTarolo, $kkTarolo, $btnTorol);
             if (adatTarolo[i].mi === "Kiadás") {
                 kiadas.append($nkTarolo);
-                $nTarolo.append(kiadas);
-                $nTarolo.fadeIn(300);
             }
             else if (adatTarolo[i].mi === "Bevétel") {
                 bevetel.append($nkTarolo);
-                $nTarolo.append(bevetel);
-                $nTarolo.fadeIn(300);
             }
             $nkTarolo.fadeIn(400);
+        };
+        if (kiadas.children().length > 1) {
+            $nTarolo.append(kiadas);
         }
+
+        if (bevetel.children().length > 1) {
+            $nTarolo.append(bevetel);
+        }
+
         if (adatTarolo.length === 0) {
-            kiadas.empty();
-            bevetel.empty();
-            $nTarolo.empty().hide();
+            $nTarolo.empty().fadeOut(200);
+        } else {
+            $nTarolo.fadeIn(200);
         }
     };
 
@@ -97,14 +103,14 @@ $(function () {
             }
             else if (adatTarolo.length === 0) {
                 $aktEgyenleg.text("Nincs még költség rögzítve");
-            }
-        }
+            };
+        };
         if (pez >= 0) {
             $aktEgyenleg.css("color", "green");
         } else {
             $aktEgyenleg.css("color", "red");
-        }
-    }
+        };
+    };
 
     function bekiSzin(ertek) {
         if (ertek === "Kiadás") {
