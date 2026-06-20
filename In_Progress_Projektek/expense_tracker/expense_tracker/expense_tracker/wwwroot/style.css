@@ -138,12 +138,11 @@ select:hover {
     transform: scale(1.15);
     transition: all 0.35s;
 }
-select:focus {
-    border-color: rgb(169, 109, 28);
-    color: rgb(169, 109, 28);
-    transform: scale(1.15);
-    transition: all 0.35s;
-}
+    select:focus {
+        outline: none;
+        border-color: rgb(169, 109, 28);
+        box-shadow: 0 0 5px rgba(169, 109, 28, 0.6);
+    }
 span{
     font-style:italic;
     font-size:20px;
