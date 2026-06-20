@@ -111,9 +111,13 @@ $(function () {
     };
 
     function Betoltes() {
-        const mentettTarolo = localStorage.getItem('adatTarolo');
-        adatTarolo = mentettTarolo ? JSON.parse(mentettTarolo) : [];
-        Epites();
-        AktualPenz();
+        if (mentettTarolo.length === 0) {
+            $nkTarolo.hide();
+        } else {
+            const mentettTarolo = localStorage.getItem('adatTarolo');
+            adatTarolo = mentettTarolo ? JSON.parse(mentettTarolo) : [];
+            Epites();
+            AktualPenz();
+        }
     };
 });
