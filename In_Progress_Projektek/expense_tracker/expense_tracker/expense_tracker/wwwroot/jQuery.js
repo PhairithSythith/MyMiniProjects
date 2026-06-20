@@ -111,13 +111,9 @@ $(function () {
     };
 
     function Betoltes() {
-        if (mentettTarolo.length === 0) {
-            $nkTarolo.hide();
-        } else {
             const mentettTarolo = localStorage.getItem('adatTarolo');
             adatTarolo = mentettTarolo ? JSON.parse(mentettTarolo) : [];
             Epites();
             AktualPenz();
-        }
     };
 });
